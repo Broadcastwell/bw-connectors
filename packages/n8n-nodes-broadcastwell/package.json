@@ -1,0 +1,72 @@
+{
+  "name": "n8n-nodes-broadcastwell",
+  "version": "0.1.0",
+  "description": "n8n nodes for Broadcastwell: read runs, receipts, sources, fixes, history, alerts and proof, and start workflows from signed Broadcastwell webhooks.",
+  "license": "MIT",
+  "homepage": "https://github.com/Broadcastwell/bw-connectors/tree/main/packages/n8n-nodes-broadcastwell#readme",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "broadcastwell",
+    "ai-visibility",
+    "chatgpt",
+    "perplexity",
+    "google-ai-overviews"
+  ],
+  "author": {
+    "name": "Broadcastwell",
+    "email": "hello@broadcastwell.com",
+    "url": "https://broadcastwell.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Broadcastwell/bw-connectors.git",
+    "directory": "packages/n8n-nodes-broadcastwell"
+  },
+  "bugs": {
+    "url": "https://github.com/Broadcastwell/bw-connectors/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "sync-routes": "node scripts/sync-routes.mjs",
+    "build": "node scripts/sync-routes.mjs && n8n-node build",
+    "build:watch": "tsc --watch",
+    "dev": "n8n-node dev",
+    "lint": "node scripts/sync-routes.mjs --check && n8n-node lint && node scripts/check-copy.mjs",
+    "lint:fix": "n8n-node lint --fix",
+    "test": "node --test test/*.test.mjs",
+    "release": "n8n-node release",
+    "prepack": "n8n-node build"
+  },
+  "files": [
+    "dist",
+    "!dist/tsconfig.tsbuildinfo",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "strict": true,
+    "credentials": [
+      "dist/credentials/BroadcastwellApi.credentials.js",
+      "dist/credentials/BroadcastwellWebhookApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/Broadcastwell/Broadcastwell.node.js",
+      "dist/nodes/BroadcastwellTrigger/BroadcastwellTrigger.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@n8n/node-cli": "0.48.6",
+    "eslint": "9.32.0",
+    "n8n-workflow": "2.39.3",
+    "prettier": "3.6.2",
+    "typescript": "5.9.2"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  }
+}
