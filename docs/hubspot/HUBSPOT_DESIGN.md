@@ -109,7 +109,7 @@ Created at install in a property group `broadcastwell` ("Broadcastwell"). All re
 Notes:
 
 - Counts are integers; percentages and interval ends are written exactly as the API returns them (one decimal), never recomputed.
-- No property holds a composite score, and there is no "change" property: movement lives in the API history and is shown on the card only where intervals separate.
+- No property blends figures into one number, and there is no "change" property: movement lives in the API history and is shown on the card only where intervals separate.
 - Date values are sent as midnight UTC, as HubSpot requires for date properties.
 - `bw_top_named_instead_1` exists so a workflow or list can filter on a single competitor without parsing text.
 
@@ -259,4 +259,4 @@ From HubSpot's listing requirements and the May 2026 changelog:
 - **Stale figures if an event is missed.** The daily reconcile bounds this to one day, and the card always prints measured on and last synced.
 - **Token handling.** Refresh races and leaked tokens are the main security risk. Mitigated by per portal locks, sealing with a purpose bound key and row bound AAD, deletion on uninstall, and never logging token or response bodies.
 - **Signature checking** on the card endpoint must use the v3 scheme with a timestamp window; a mistake would let anyone read a portal's snapshot by guessing a portal id.
-- **Copy drift.** Every string on the card and in the properties follows the house rules in this document: counts first, base and interval with every rate, engines named exactly, no composite score, no claims of instant updates.
+- **Copy drift.** Every string on the card and in the properties follows the house rules in this document: counts first, base and interval with every rate, engines named exactly, no blended single number, no claims of instant updates.
