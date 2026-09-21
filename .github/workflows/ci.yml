@@ -1,0 +1,62 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Node ${{ matrix.node }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [20, 22]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: "@broadcastwell/api: build"
+        working-directory: packages/api
+        run: npm run build
+
+      - name: "@broadcastwell/api: lint"
+        working-directory: packages/api
+        run: npm run lint
+
+      - name: "@broadcastwell/api: test"
+        working-directory: packages/api
+        run: npm test
+
+      - name: "n8n-nodes-broadcastwell: build"
+        working-directory: packages/n8n-nodes-broadcastwell
+        run: npm run build
+
+      - name: "n8n-nodes-broadcastwell: lint"
+        working-directory: packages/n8n-nodes-broadcastwell
+        run: npm run lint
+
+      - name: "n8n-nodes-broadcastwell: test"
+        working-directory: packages/n8n-nodes-broadcastwell
+        run: npm test
+
+      - name: Copy check across the repository
+        run: node packages/api/scripts/check-copy.mjs .
+
+      - name: Generated files are committed
+        run: git diff --exit-code

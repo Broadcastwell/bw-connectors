@@ -1,0 +1,68 @@
+# Publishes packages/n8n-nodes-broadcastwell to npm with a provenance statement.
+# n8n verifies community nodes only when they are published this way (required
+# since 1 May 2026). See packages/n8n-nodes-broadcastwell/PUBLISHING.md.
+#
+# Trigger: push a tag named n8n-nodes-broadcastwell@<version>, for example
+#   git tag n8n-nodes-broadcastwell@0.1.0 && git push origin --tags
+#
+# Authentication, set up once by the repository owner:
+#   A. npm trusted publishing (no secret): on npmjs.com, package settings,
+#      Trusted Publisher, GitHub Actions, repository Broadcastwell/bw-connectors,
+#      workflow publish-n8n-node.yml. Available once the package exists.
+#   B. NPM_TOKEN: a granular npm access token with publish rights, saved as the
+#      repository secret NPM_TOKEN. Needed for the first release.
+# Provenance is signed with the GitHub OIDC token either way.
+
+name: Publish n8n node
+
+on:
+  push:
+    tags:
+      - 'n8n-nodes-broadcastwell@*'
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    name: Publish n8n-nodes-broadcastwell
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: packages/n8n-nodes-broadcastwell
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: 'https://registry.npmjs.org'
+          cache: npm
+
+      - name: Use an npm that supports trusted publishing
+        run: npm install -g npm@11
+
+      - name: Install
+        working-directory: .
+        run: npm ci
+
+      - name: Tag matches package version
+        run: |
+          version=$(node -p "require('./package.json').version")
+          if [ "$GITHUB_REF_NAME" != "n8n-nodes-broadcastwell@$version" ]; then
+            echo "Tag $GITHUB_REF_NAME does not match package version $version"
+            exit 1
+          fi
+
+      - name: Build, lint and test
+        run: |
+          npm run build --workspace=@broadcastwell/api
+          npm run build
+          npm run lint
+          npm test
+
+      - name: Publish with provenance
+        run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
