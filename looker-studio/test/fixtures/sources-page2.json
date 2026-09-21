@@ -1,0 +1,266 @@
+{
+  "_note": "Captured from the live Broadcastwell API with the public demo key. Kalvenor is fictional sample data.",
+  "captured_on": "2026-09-21",
+  "request": "GET /accounts/sample/runs/kalvenor-monitor/sources?limit=5&cursor=YzE6NQ",
+  "status": 200,
+  "headers": {
+    "content-type": "application/json; charset=utf-8",
+    "ratelimit-limit": "30",
+    "ratelimit-remaining": "28"
+  },
+  "body": {
+    "sample": true,
+    "notice": "Sample data. Kalvenor Systems is a fictional company.",
+    "run_id": "kalvenor-monitor",
+    "domains": [
+      {
+        "domain": "fieldservicereview.example",
+        "own_domain": false,
+        "times_cited": 32,
+        "pages": 10
+      },
+      {
+        "domain": "asterforge.example",
+        "own_domain": false,
+        "times_cited": 31,
+        "pages": 10
+      },
+      {
+        "domain": "servicetechforum.example",
+        "own_domain": false,
+        "times_cited": 30,
+        "pages": 10
+      },
+      {
+        "domain": "servicebuyersguide.example",
+        "own_domain": false,
+        "times_cited": 29,
+        "pages": 9
+      },
+      {
+        "domain": "softwarecompare.example",
+        "own_domain": false,
+        "times_cited": 27,
+        "pages": 9
+      },
+      {
+        "domain": "trakwell.example",
+        "own_domain": false,
+        "times_cited": 27,
+        "pages": 9
+      },
+      {
+        "domain": "veranofsm.example",
+        "own_domain": false,
+        "times_cited": 27,
+        "pages": 10
+      },
+      {
+        "domain": "cindermark.example",
+        "own_domain": false,
+        "times_cited": 26,
+        "pages": 8
+      },
+      {
+        "domain": "northvalefsm.example",
+        "own_domain": false,
+        "times_cited": 23,
+        "pages": 10
+      },
+      {
+        "domain": "hvacoperations.example",
+        "own_domain": false,
+        "times_cited": 20,
+        "pages": 9
+      },
+      {
+        "domain": "operationsweekly.example",
+        "own_domain": false,
+        "times_cited": 19,
+        "pages": 8
+      },
+      {
+        "domain": "orbitfield.example",
+        "own_domain": false,
+        "times_cited": 19,
+        "pages": 8
+      },
+      {
+        "domain": "kalvenor.example",
+        "own_domain": true,
+        "times_cited": 6,
+        "pages": 4
+      }
+    ],
+    "data": [
+      {
+        "url": "https://cindermark.example/core/8",
+        "domain": "cindermark.example",
+        "own_domain": false,
+        "times_cited": 5,
+        "engines": [
+          {
+            "id": "claude",
+            "label": "Claude"
+          },
+          {
+            "id": "perplexity",
+            "label": "Perplexity"
+          },
+          {
+            "id": "google_aio",
+            "label": "Google AI Overviews"
+          },
+          {
+            "id": "google_ai_mode",
+            "label": "Google AI Mode"
+          }
+        ],
+        "question_ids": [
+          8
+        ],
+        "answers_naming_client": 1,
+        "receipt_ids": [
+          "observation-030907f7-d519-4e8f-a619-9063560f54da",
+          "observation-3fb5525e-e69c-4d57-9108-1d7ccb8066b3",
+          "observation-43560b34-d735-44ba-99ed-be421e157f63",
+          "observation-0d2a4f9f-81c3-49b7-bbce-bbb4c340b235",
+          "observation-c150852b-96bd-452b-85e6-def288d45686"
+        ]
+      },
+      {
+        "url": "https://fieldservicereview.example/core/10",
+        "domain": "fieldservicereview.example",
+        "own_domain": false,
+        "times_cited": 5,
+        "engines": [
+          {
+            "id": "claude",
+            "label": "Claude"
+          },
+          {
+            "id": "perplexity",
+            "label": "Perplexity"
+          },
+          {
+            "id": "google_aio",
+            "label": "Google AI Overviews"
+          }
+        ],
+        "question_ids": [
+          10
+        ],
+        "answers_naming_client": 1,
+        "receipt_ids": [
+          "observation-85dcb177-821f-416d-948a-6895618c7ea6",
+          "observation-c87b1458-78c0-4824-952e-4bec99a62d11",
+          "observation-00ed4e73-3f87-44e3-a3c6-19846d4fe174",
+          "observation-66f985a3-9b49-4bfc-965f-2f3167e1b5ff",
+          "observation-9520948f-5fb7-46c3-9f76-e6a144c72352"
+        ]
+      },
+      {
+        "url": "https://northvalefsm.example/core/8",
+        "domain": "northvalefsm.example",
+        "own_domain": false,
+        "times_cited": 5,
+        "engines": [
+          {
+            "id": "chatgpt",
+            "label": "ChatGPT"
+          },
+          {
+            "id": "claude",
+            "label": "Claude"
+          },
+          {
+            "id": "google_aio",
+            "label": "Google AI Overviews"
+          }
+        ],
+        "question_ids": [
+          8
+        ],
+        "answers_naming_client": 0,
+        "receipt_ids": [
+          "observation-d35d7926-30b2-4276-90fa-bfac7bdc26df",
+          "observation-030907f7-d519-4e8f-a619-9063560f54da",
+          "observation-c1d1a7fa-7ac4-4f75-a618-79ac9a67f7db",
+          "observation-ed7dd1bf-75fd-4d6f-8aaf-f88dbf909541",
+          "observation-70d6f3b2-68eb-445c-8c3c-360403f8d25a"
+        ]
+      },
+      {
+        "url": "https://northvalefsm.example/core/9",
+        "domain": "northvalefsm.example",
+        "own_domain": false,
+        "times_cited": 5,
+        "engines": [
+          {
+            "id": "chatgpt",
+            "label": "ChatGPT"
+          },
+          {
+            "id": "claude",
+            "label": "Claude"
+          },
+          {
+            "id": "perplexity",
+            "label": "Perplexity"
+          },
+          {
+            "id": "google_ai_mode",
+            "label": "Google AI Mode"
+          }
+        ],
+        "question_ids": [
+          9
+        ],
+        "answers_naming_client": 1,
+        "receipt_ids": [
+          "observation-e0a5204b-be45-4ba7-ad65-6ac2922c7f9f",
+          "observation-9f18f8d0-bb34-4e3a-b1fd-8d39c9fab411",
+          "observation-17420101-28f2-4049-9aad-a68689ec7efd",
+          "observation-a0fd203b-c699-4578-8a9a-c37fc4800d54",
+          "observation-133b84ea-54f4-4b15-b3c5-7b74ee823d55"
+        ]
+      },
+      {
+        "url": "https://operationsweekly.example/core/6",
+        "domain": "operationsweekly.example",
+        "own_domain": false,
+        "times_cited": 5,
+        "engines": [
+          {
+            "id": "claude",
+            "label": "Claude"
+          },
+          {
+            "id": "perplexity",
+            "label": "Perplexity"
+          },
+          {
+            "id": "google_ai_mode",
+            "label": "Google AI Mode"
+          }
+        ],
+        "question_ids": [
+          6
+        ],
+        "answers_naming_client": 2,
+        "receipt_ids": [
+          "observation-72ee1785-d168-4ae5-955e-3cc9088873e1",
+          "observation-bc6c94eb-7996-46b5-a18f-f9185147686d",
+          "observation-f14efd17-db38-4f6f-b8a9-909f8c47eef9",
+          "observation-9ffea651-5f22-4527-9e15-08785a394218",
+          "observation-17bd282f-184a-4afb-a226-63f03c2ab027"
+        ]
+      }
+    ],
+    "pagination": {
+      "limit": 5,
+      "next_cursor": "YzE6MTA",
+      "total": 114
+    }
+  }
+}

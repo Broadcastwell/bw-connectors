@@ -1,6 +1,6 @@
 # @broadcastwell/api
 
-A small JavaScript client for the [Broadcastwell API](https://app.broadcastwell.com/developers). No dependencies. Works in Node 18 and later, browsers, workers and Google Apps Script.
+A small JavaScript client for the [Broadcastwell API](https://app.broadcastwell.com/developers). No dependencies. Works in Node 18 and later, browsers and workers. Google Apps Script code that must return synchronously, such as a Looker Studio connector, uses the shared routes table instead (see looker-studio/).
 
 Broadcastwell measures whether ChatGPT, Claude, Perplexity, Google AI Overviews and Google AI Mode name a B2B software company when buyers ask shortlist questions, and keeps a receipt for every answer. This client reads those measurements: runs, summaries, questions, receipts, who was named instead, cited sources, fixes, history, alerts and proof experiments.
 
@@ -187,7 +187,7 @@ buildQuery('listReceipts', { verdict: 'not_named', limit: 50 }); // ?verdict=not
 | --- | --- |
 | `src/index.mjs` | ES modules (`import`) |
 | `dist/index.cjs` | CommonJS (`require`) |
-| `dist/broadcastwell.global.js` | A plain script that defines a `Broadcastwell` global: script tags and Google Apps Script. Apps Script has no `fetch`, so pass an adapter over `UrlFetchApp` as `createClient({ fetch })`. |
+| `dist/broadcastwell.global.js` | A plain script that defines a `Broadcastwell` global: script tags and Google Apps Script. In Apps Script, where entry points must return synchronously, use its `routes` and path helpers with `UrlFetchApp`, as the Looker Studio connector does. |
 | `types.d.ts` | TypeScript types for every schema, parameter set and response |
 
 The source is written as ES modules. `scripts/build.mjs` makes the CommonJS and script copies by stripping the import and export lines, so there is no bundler and no dependency; the committed copies are checked for staleness in CI.

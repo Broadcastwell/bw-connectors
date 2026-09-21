@@ -1,0 +1,233 @@
+{
+  "_note": "Captured from the live Broadcastwell API with the public demo key. Kalvenor is fictional sample data.",
+  "captured_on": "2026-09-21",
+  "request": "GET /accounts/sample/runs/kalvenor-monitor/summary",
+  "status": 200,
+  "headers": {
+    "content-type": "application/json; charset=utf-8",
+    "ratelimit-limit": "30",
+    "ratelimit-remaining": "22"
+  },
+  "body": {
+    "sample": true,
+    "notice": "Sample data. Kalvenor Systems is a fictional company.",
+    "data": {
+      "run_id": "kalvenor-monitor",
+      "kind": "monitor",
+      "status": "delivered",
+      "method_version": "1.1",
+      "engines": [
+        {
+          "id": "chatgpt",
+          "label": "ChatGPT"
+        },
+        {
+          "id": "claude",
+          "label": "Claude"
+        },
+        {
+          "id": "perplexity",
+          "label": "Perplexity"
+        },
+        {
+          "id": "google_aio",
+          "label": "Google AI Overviews"
+        },
+        {
+          "id": "google_ai_mode",
+          "label": "Google AI Mode"
+        }
+      ],
+      "question_count": 10,
+      "passes": [
+        {
+          "pass_id": "2026-05",
+          "kind": "monitor",
+          "scheduled": true,
+          "started_at": "2026-05-12T09:24:00.000Z",
+          "completed_at": "2026-05-12T16:21:00.000Z",
+          "observed": 50
+        },
+        {
+          "pass_id": "2026-06",
+          "kind": "monitor",
+          "scheduled": true,
+          "started_at": "2026-06-12T09:24:00.000Z",
+          "completed_at": "2026-06-12T16:21:00.000Z",
+          "observed": 50
+        },
+        {
+          "pass_id": "2026-08",
+          "kind": "monitor",
+          "scheduled": true,
+          "started_at": "2026-08-12T09:24:00.000Z",
+          "completed_at": "2026-08-12T16:21:00.000Z",
+          "observed": 50
+        }
+      ],
+      "scheduled": {
+        "observed": 150,
+        "scored": 150,
+        "excluded": 0,
+        "named": 30,
+        "named_rate": {
+          "pct": 20,
+          "low": 14.4,
+          "high": 27.1,
+          "interval": "14.4 to 27.1",
+          "base": "30 of 150 answers"
+        },
+        "own_domain_cited": 6,
+        "cited_rate": {
+          "pct": 4,
+          "low": 1.8,
+          "high": 8.5,
+          "interval": "1.8 to 8.5",
+          "base": "6 of 150 answers"
+        },
+        "exclusion_reasons": {},
+        "questions_with_a_mention": {
+          "count": 10,
+          "of": 10
+        },
+        "per_engine": {
+          "chatgpt": {
+            "label": "ChatGPT",
+            "observed": 30,
+            "scored": 30,
+            "excluded": 0,
+            "named": 5,
+            "named_rate": {
+              "pct": 16.7,
+              "low": 7.3,
+              "high": 33.6,
+              "interval": "7.3 to 33.6",
+              "base": "5 of 30 answers"
+            },
+            "own_domain_cited": 0,
+            "cited_rate": {
+              "pct": 0,
+              "low": 0,
+              "high": 11.4,
+              "interval": "0.0 to 11.4",
+              "base": "0 of 30 answers"
+            }
+          },
+          "claude": {
+            "label": "Claude",
+            "observed": 30,
+            "scored": 30,
+            "excluded": 0,
+            "named": 8,
+            "named_rate": {
+              "pct": 26.7,
+              "low": 14.2,
+              "high": 44.4,
+              "interval": "14.2 to 44.4",
+              "base": "8 of 30 answers"
+            },
+            "own_domain_cited": 3,
+            "cited_rate": {
+              "pct": 10,
+              "low": 3.5,
+              "high": 25.6,
+              "interval": "3.5 to 25.6",
+              "base": "3 of 30 answers"
+            }
+          },
+          "perplexity": {
+            "label": "Perplexity",
+            "observed": 30,
+            "scored": 30,
+            "excluded": 0,
+            "named": 6,
+            "named_rate": {
+              "pct": 20,
+              "low": 9.5,
+              "high": 37.3,
+              "interval": "9.5 to 37.3",
+              "base": "6 of 30 answers"
+            },
+            "own_domain_cited": 1,
+            "cited_rate": {
+              "pct": 3.3,
+              "low": 0.6,
+              "high": 16.7,
+              "interval": "0.6 to 16.7",
+              "base": "1 of 30 answers"
+            }
+          },
+          "google_aio": {
+            "label": "Google AI Overviews",
+            "observed": 30,
+            "scored": 30,
+            "excluded": 0,
+            "named": 6,
+            "named_rate": {
+              "pct": 20,
+              "low": 9.5,
+              "high": 37.3,
+              "interval": "9.5 to 37.3",
+              "base": "6 of 30 answers"
+            },
+            "own_domain_cited": 1,
+            "cited_rate": {
+              "pct": 3.3,
+              "low": 0.6,
+              "high": 16.7,
+              "interval": "0.6 to 16.7",
+              "base": "1 of 30 answers"
+            }
+          },
+          "google_ai_mode": {
+            "label": "Google AI Mode",
+            "observed": 30,
+            "scored": 30,
+            "excluded": 0,
+            "named": 5,
+            "named_rate": {
+              "pct": 16.7,
+              "low": 7.3,
+              "high": 33.6,
+              "interval": "7.3 to 33.6",
+              "base": "5 of 30 answers"
+            },
+            "own_domain_cited": 1,
+            "cited_rate": {
+              "pct": 3.3,
+              "low": 0.6,
+              "high": 16.7,
+              "interval": "0.6 to 16.7",
+              "base": "1 of 30 answers"
+            }
+          }
+        },
+        "per_question_type": {
+          "core": {
+            "label": "Core category",
+            "observed": 150,
+            "scored": 150,
+            "excluded": 0,
+            "named": 30,
+            "named_rate": {
+              "pct": 20,
+              "low": 14.4,
+              "high": 27.1,
+              "interval": "14.4 to 27.1",
+              "base": "30 of 150 answers"
+            },
+            "own_domain_cited": 6,
+            "cited_rate": {
+              "pct": 4,
+              "low": 1.8,
+              "high": 8.5,
+              "interval": "1.8 to 8.5",
+              "base": "6 of 150 answers"
+            }
+          }
+        }
+      },
+      "adaptive": null
+    }
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "_note": "Captured from the live Broadcastwell API with the public demo key. Kalvenor is fictional sample data.",
+  "captured_on": "2026-09-21",
+  "request": "GET /accounts/sample/runs?limit=100",
+  "status": 200,
+  "headers": {
+    "content-type": "application/json; charset=utf-8",
+    "ratelimit-limit": "30",
+    "ratelimit-remaining": "26"
+  },
+  "body": {
+    "sample": true,
+    "notice": "Sample data. Kalvenor Systems is a fictional company.",
+    "data": [
+      {
+        "run_id": "kalvenor-monitor",
+        "kind": "monitor",
+        "source": "measurement",
+        "origin": "client",
+        "status": "delivered",
+        "method_version": "1.1",
+        "created_at": "2026-05-12T09:24:00.000Z",
+        "completed_at": "2026-08-12T16:21:00.000Z",
+        "immutable": false,
+        "question_count": 10,
+        "engines": [
+          "chatgpt",
+          "claude",
+          "perplexity",
+          "google_aio",
+          "google_ai_mode"
+        ],
+        "passes": [
+          {
+            "pass_id": "2026-05",
+            "kind": "monitor",
+            "scheduled": true,
+            "started_at": "2026-05-12T09:24:00.000Z",
+            "completed_at": "2026-05-12T16:21:00.000Z",
+            "observed": 50
+          },
+          {
+            "pass_id": "2026-06",
+            "kind": "monitor",
+            "scheduled": true,
+            "started_at": "2026-06-12T09:24:00.000Z",
+            "completed_at": "2026-06-12T16:21:00.000Z",
+            "observed": 50
+          },
+          {
+            "pass_id": "2026-08",
+            "kind": "monitor",
+            "scheduled": true,
+            "started_at": "2026-08-12T09:24:00.000Z",
+            "completed_at": "2026-08-12T16:21:00.000Z",
+            "observed": 50
+          }
+        ]
+      },
+      {
+        "run_id": "baseline-kalvenor-v11",
+        "kind": "diagnostic",
+        "source": "measurement",
+        "origin": "client",
+        "status": "delivered",
+        "method_version": "1.1",
+        "created_at": "2026-07-08T08:03:00.000Z",
+        "completed_at": "2026-07-14T16:56:00.000Z",
+        "immutable": true,
+        "question_count": 35,
+        "engines": [
+          "chatgpt",
+          "claude",
+          "perplexity",
+          "google_aio",
+          "google_ai_mode"
+        ],
+        "passes": [
+          {
+            "pass_id": "run-1",
+            "kind": "scheduled",
+            "scheduled": true,
+            "started_at": "2026-07-08T08:03:00.000Z",
+            "completed_at": "2026-07-08T16:59:00.000Z",
+            "observed": 175
+          },
+          {
+            "pass_id": "run-2",
+            "kind": "scheduled",
+            "scheduled": true,
+            "started_at": "2026-07-10T08:03:00.000Z",
+            "completed_at": "2026-07-10T16:59:00.000Z",
+            "observed": 175
+          },
+          {
+            "pass_id": "run-3",
+            "kind": "scheduled",
+            "scheduled": true,
+            "started_at": "2026-07-12T08:03:00.000Z",
+            "completed_at": "2026-07-12T16:59:00.000Z",
+            "observed": 175
+          },
+          {
+            "pass_id": "run-4",
+            "kind": "adaptive",
+            "scheduled": false,
+            "started_at": "2026-07-14T08:03:00.000Z",
+            "completed_at": "2026-07-14T16:56:00.000Z",
+            "observed": 24
+          }
+        ]
+      },
+      {
+        "run_id": "baseline-kalvenor-001",
+        "kind": "diagnostic_v1",
+        "source": "measurement",
+        "origin": "client",
+        "status": "delivered",
+        "method_version": "1.0",
+        "created_at": "2026-01-15T12:00:00.000Z",
+        "completed_at": "2026-01-15T12:59:00.000Z",
+        "immutable": true,
+        "question_count": 10,
+        "engines": [
+          "chatgpt",
+          "claude",
+          "perplexity",
+          "google_aio"
+        ],
+        "passes": [
+          {
+            "pass_id": "run-kalvenor-001",
+            "kind": "scheduled",
+            "scheduled": true,
+            "started_at": "2026-01-15T12:00:00.000Z",
+            "completed_at": "2026-01-15T12:59:00.000Z",
+            "observed": 120
+          }
+        ]
+      }
+    ],
+    "pagination": {
+      "limit": 100,
+      "next_cursor": null,
+      "total": 3
+    }
+  }
+}

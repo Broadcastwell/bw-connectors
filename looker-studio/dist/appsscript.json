@@ -1,0 +1,26 @@
+{
+  "timeZone": "Etc/UTC",
+  "runtimeVersion": "V8",
+  "exceptionLogging": "STACKDRIVER",
+  "oauthScopes": [
+    "https://www.googleapis.com/auth/script.external_request"
+  ],
+  "urlFetchWhitelist": [
+    "https://app.broadcastwell.com/api/v1/"
+  ],
+  "dataStudio": {
+    "name": "Broadcastwell",
+    "company": "Broadcastwell",
+    "companyUrl": "https://broadcastwell.com",
+    "logoUrl": "https://app.broadcastwell.com/assets/connector-icon-256.png",
+    "addonUrl": "https://app.broadcastwell.com/developers",
+    "supportUrl": "https://app.broadcastwell.com/developers",
+    "privacyPolicyUrl": "https://broadcastwell.com/privacy",
+    "termsOfServiceUrl": "https://broadcastwell.com/terms",
+    "shortDescription": "Whether ChatGPT, Claude, Perplexity and Google AI answers name your company, with counts and intervals.",
+    "description": "Broadcastwell measures whether ChatGPT, Claude, Perplexity, Google AI Overviews and Google AI Mode name your B2B software company when buyers ask shortlist questions, and keeps a receipt for every answer. This data source reads your measurements through the read only Broadcastwell API: history (one point per scheduled run for the account, each engine or each question type), run summaries, who was named instead, cited sources and alerts. Counts come first and every rate arrives with its base and 95% interval. Headline figures come from scheduled runs only; adaptive answers are reported apart. Add an API key from your account at https://app.broadcastwell.com/account, or try the public demo key bwp_demo_kalvenor_sample, which reads the fictional Kalvenor sample. Setup: https://app.broadcastwell.com/developers",
+    "authType": ["KEY"],
+    "feeType": ["FREE"],
+    "sources": ["BROADCASTWELL"]
+  }
+}

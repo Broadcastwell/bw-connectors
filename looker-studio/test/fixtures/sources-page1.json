@@ -1,0 +1,274 @@
+{
+  "_note": "Captured from the live Broadcastwell API with the public demo key. Kalvenor is fictional sample data.",
+  "captured_on": "2026-09-21",
+  "request": "GET /accounts/sample/runs/kalvenor-monitor/sources?limit=5",
+  "status": 200,
+  "headers": {
+    "content-type": "application/json; charset=utf-8",
+    "ratelimit-limit": "30",
+    "ratelimit-remaining": "20"
+  },
+  "body": {
+    "sample": true,
+    "notice": "Sample data. Kalvenor Systems is a fictional company.",
+    "run_id": "kalvenor-monitor",
+    "domains": [
+      {
+        "domain": "fieldservicereview.example",
+        "own_domain": false,
+        "times_cited": 32,
+        "pages": 10
+      },
+      {
+        "domain": "asterforge.example",
+        "own_domain": false,
+        "times_cited": 31,
+        "pages": 10
+      },
+      {
+        "domain": "servicetechforum.example",
+        "own_domain": false,
+        "times_cited": 30,
+        "pages": 10
+      },
+      {
+        "domain": "servicebuyersguide.example",
+        "own_domain": false,
+        "times_cited": 29,
+        "pages": 9
+      },
+      {
+        "domain": "softwarecompare.example",
+        "own_domain": false,
+        "times_cited": 27,
+        "pages": 9
+      },
+      {
+        "domain": "trakwell.example",
+        "own_domain": false,
+        "times_cited": 27,
+        "pages": 9
+      },
+      {
+        "domain": "veranofsm.example",
+        "own_domain": false,
+        "times_cited": 27,
+        "pages": 10
+      },
+      {
+        "domain": "cindermark.example",
+        "own_domain": false,
+        "times_cited": 26,
+        "pages": 8
+      },
+      {
+        "domain": "northvalefsm.example",
+        "own_domain": false,
+        "times_cited": 23,
+        "pages": 10
+      },
+      {
+        "domain": "hvacoperations.example",
+        "own_domain": false,
+        "times_cited": 20,
+        "pages": 9
+      },
+      {
+        "domain": "operationsweekly.example",
+        "own_domain": false,
+        "times_cited": 19,
+        "pages": 8
+      },
+      {
+        "domain": "orbitfield.example",
+        "own_domain": false,
+        "times_cited": 19,
+        "pages": 8
+      },
+      {
+        "domain": "kalvenor.example",
+        "own_domain": true,
+        "times_cited": 6,
+        "pages": 4
+      }
+    ],
+    "data": [
+      {
+        "url": "https://veranofsm.example/core/7",
+        "domain": "veranofsm.example",
+        "own_domain": false,
+        "times_cited": 7,
+        "engines": [
+          {
+            "id": "chatgpt",
+            "label": "ChatGPT"
+          },
+          {
+            "id": "claude",
+            "label": "Claude"
+          },
+          {
+            "id": "perplexity",
+            "label": "Perplexity"
+          },
+          {
+            "id": "google_aio",
+            "label": "Google AI Overviews"
+          },
+          {
+            "id": "google_ai_mode",
+            "label": "Google AI Mode"
+          }
+        ],
+        "question_ids": [
+          7
+        ],
+        "answers_naming_client": 2,
+        "receipt_ids": [
+          "observation-bd9c3006-6e07-45ad-8443-21289ca1141e",
+          "observation-779d761c-b7c6-4ed0-a9d4-6eec51c35953",
+          "observation-2fa96390-84f7-48ac-b721-14d9b881f31c",
+          "observation-d758f2e8-33dc-4a72-afef-cf302e1f22bb",
+          "observation-5b8f35a2-0b48-4e95-a98d-d7bb5fb4b772",
+          "observation-cbf17fa0-dfb4-45ff-9735-752b7f5fa2d0",
+          "observation-3cfad1f3-e9e0-4330-94ff-8f9f79d4bb59"
+        ]
+      },
+      {
+        "url": "https://servicebuyersguide.example/core/2",
+        "domain": "servicebuyersguide.example",
+        "own_domain": false,
+        "times_cited": 6,
+        "engines": [
+          {
+            "id": "claude",
+            "label": "Claude"
+          },
+          {
+            "id": "perplexity",
+            "label": "Perplexity"
+          },
+          {
+            "id": "google_ai_mode",
+            "label": "Google AI Mode"
+          }
+        ],
+        "question_ids": [
+          2
+        ],
+        "answers_naming_client": 1,
+        "receipt_ids": [
+          "observation-396a582d-234e-42ae-ac0c-8273a80dae9e",
+          "observation-9f4492a0-ed11-49d0-92bb-1dada3d4405e",
+          "observation-365d6cde-4105-4197-b246-abca79cd654e",
+          "observation-0d3a9135-0aa8-41bd-9ad3-1c0064abfa7d",
+          "observation-b1b24181-5306-461a-90f1-55e9e4f34ecd",
+          "observation-c76f9d30-2823-4ce4-a710-4d50b1109013"
+        ]
+      },
+      {
+        "url": "https://trakwell.example/core/7",
+        "domain": "trakwell.example",
+        "own_domain": false,
+        "times_cited": 6,
+        "engines": [
+          {
+            "id": "chatgpt",
+            "label": "ChatGPT"
+          },
+          {
+            "id": "claude",
+            "label": "Claude"
+          },
+          {
+            "id": "google_aio",
+            "label": "Google AI Overviews"
+          },
+          {
+            "id": "google_ai_mode",
+            "label": "Google AI Mode"
+          }
+        ],
+        "question_ids": [
+          7
+        ],
+        "answers_naming_client": 1,
+        "receipt_ids": [
+          "observation-f2654a10-c684-431d-ae93-a5357d3d5b3e",
+          "observation-bd9c3006-6e07-45ad-8443-21289ca1141e",
+          "observation-323ee728-84dd-41de-9447-29e4f91ff0e5",
+          "observation-6601c408-12e7-4388-9d53-6bb4a2c0f9a0",
+          "observation-2f9f40ad-f751-4823-b8ab-5a8816181415",
+          "observation-cbf17fa0-dfb4-45ff-9735-752b7f5fa2d0"
+        ]
+      },
+      {
+        "url": "https://asterforge.example/core/4",
+        "domain": "asterforge.example",
+        "own_domain": false,
+        "times_cited": 5,
+        "engines": [
+          {
+            "id": "chatgpt",
+            "label": "ChatGPT"
+          },
+          {
+            "id": "claude",
+            "label": "Claude"
+          },
+          {
+            "id": "perplexity",
+            "label": "Perplexity"
+          }
+        ],
+        "question_ids": [
+          4
+        ],
+        "answers_naming_client": 1,
+        "receipt_ids": [
+          "observation-5b5859b3-10b2-41d6-af80-34273186f15a",
+          "observation-604a3c4e-3302-4ec8-b6d1-fe0145b4987b",
+          "observation-9298b1a8-cd34-478d-be7b-94ff6ba18758",
+          "observation-81daf88d-3341-448e-90df-8888a8d6fefe",
+          "observation-283fd675-6ffc-4210-ae4b-1bf6b3893971"
+        ]
+      },
+      {
+        "url": "https://asterforge.example/core/5",
+        "domain": "asterforge.example",
+        "own_domain": false,
+        "times_cited": 5,
+        "engines": [
+          {
+            "id": "chatgpt",
+            "label": "ChatGPT"
+          },
+          {
+            "id": "google_aio",
+            "label": "Google AI Overviews"
+          },
+          {
+            "id": "google_ai_mode",
+            "label": "Google AI Mode"
+          }
+        ],
+        "question_ids": [
+          5
+        ],
+        "answers_naming_client": 1,
+        "receipt_ids": [
+          "observation-6851c6d3-04ca-4072-a374-1a713dffc2ee",
+          "observation-3dff51c1-c0c6-43f8-bec2-91bbf4785ca5",
+          "observation-dfad2e90-d156-43cb-9dd5-5bccee327ae6",
+          "observation-afb7f461-778e-4534-a081-2f8fb76b6128",
+          "observation-e8b2e9d6-958a-473b-8757-29cd3007d2ee"
+        ]
+      }
+    ],
+    "pagination": {
+      "limit": 5,
+      "next_cursor": "YzE6NQ",
+      "total": 114
+    }
+  }
+}

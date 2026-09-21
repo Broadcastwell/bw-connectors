@@ -1,0 +1,20 @@
+{
+  "_note": "Captured from the live Broadcastwell API with the public demo key. Kalvenor is fictional sample data.",
+  "captured_on": "2026-09-21",
+  "request": "GET /me",
+  "status": 200,
+  "headers": {
+    "content-type": "application/json; charset=utf-8",
+    "ratelimit-limit": "30",
+    "ratelimit-remaining": "29"
+  },
+  "body": {
+    "data": {
+      "demo": true,
+      "reads": [
+        "sample"
+      ],
+      "note": "The public demo key reads the fictional Kalvenor sample only."
+    }
+  }
+}

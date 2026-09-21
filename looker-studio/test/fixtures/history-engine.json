@@ -1,0 +1,1467 @@
+{
+  "_note": "Captured from the live Broadcastwell API with the public demo key. Kalvenor is fictional sample data.",
+  "captured_on": "2026-09-21",
+  "request": "GET /accounts/sample/history?scope=engine",
+  "status": 200,
+  "headers": {
+    "content-type": "application/json; charset=utf-8",
+    "ratelimit-limit": "30",
+    "ratelimit-remaining": "24"
+  },
+  "body": {
+    "sample": true,
+    "notice": "Sample data. Kalvenor Systems is a fictional company.",
+    "note": "One point per scheduled run. Adaptive runs are not points. Two runs are compared only on the same method version, questions and engines, and a move is printed only where the two 95% intervals separate.",
+    "data": [
+      {
+        "scope": "engine",
+        "key": "chatgpt",
+        "label": "ChatGPT",
+        "series": [
+          {
+            "series": 1,
+            "label": "10 questions, 1 engines, method 1.0"
+          },
+          {
+            "series": 2,
+            "label": "10 questions, 1 engines, method 1.1"
+          },
+          {
+            "series": 3,
+            "label": "35 questions, 1 engines, method 1.1"
+          }
+        ],
+        "points": [
+          {
+            "run_id": "baseline-kalvenor-001",
+            "pass_id": "run-kalvenor-001",
+            "pass_kind": "scheduled",
+            "observed_on": "2026-01-15",
+            "method_version": "1.0",
+            "observed": 30,
+            "excluded": 0,
+            "named": 5,
+            "scored": 30,
+            "named_rate": {
+              "pct": 16.7,
+              "low": 7.3,
+              "high": 33.6,
+              "interval": "7.3 to 33.6",
+              "base": "5 of 30 answers"
+            },
+            "series": 1
+          },
+          {
+            "run_id": "kalvenor-monitor",
+            "pass_id": "2026-05",
+            "pass_kind": "monitor",
+            "observed_on": "2026-05-12",
+            "method_version": "1.1",
+            "observed": 10,
+            "excluded": 0,
+            "named": 4,
+            "scored": 10,
+            "named_rate": {
+              "pct": 40,
+              "low": 16.8,
+              "high": 68.7,
+              "interval": "16.8 to 68.7",
+              "base": "4 of 10 answers"
+            },
+            "series": 2
+          },
+          {
+            "run_id": "kalvenor-monitor",
+            "pass_id": "2026-06",
+            "pass_kind": "monitor",
+            "observed_on": "2026-06-12",
+            "method_version": "1.1",
+            "observed": 10,
+            "excluded": 0,
+            "named": 1,
+            "scored": 10,
+            "named_rate": {
+              "pct": 10,
+              "low": 1.8,
+              "high": 40.4,
+              "interval": "1.8 to 40.4",
+              "base": "1 of 10 answers"
+            },
+            "series": 2
+          },
+          {
+            "run_id": "baseline-kalvenor-v11",
+            "pass_id": "run-1",
+            "pass_kind": "scheduled",
+            "observed_on": "2026-07-08",
+            "method_version": "1.1",
+            "observed": 35,
+            "excluded": 1,
+            "named": 11,
+            "scored": 34,
+            "named_rate": {
+              "pct": 32.4,
+              "low": 19.1,
+              "high": 49.2,
+              "interval": "19.1 to 49.2",
+              "base": "11 of 34 answers"
+            },
+            "series": 3
+          },
+          {
+            "run_id": "baseline-kalvenor-v11",
+            "pass_id": "run-2",
+            "pass_kind": "scheduled",
+            "observed_on": "2026-07-10",
+            "method_version": "1.1",
+            "observed": 35,
+            "excluded": 0,
+            "named": 14,
+            "scored": 35,
+            "named_rate": {
+              "pct": 40,
+              "low": 25.6,
+              "high": 56.4,
+              "interval": "25.6 to 56.4",
+              "base": "14 of 35 answers"
+            },
+            "series": 3
+          },
+          {
+            "run_id": "baseline-kalvenor-v11",
+            "pass_id": "run-3",
+            "pass_kind": "scheduled",
+            "observed_on": "2026-07-12",
+            "method_version": "1.1",
+            "observed": 35,
+            "excluded": 1,
+            "named": 13,
+            "scored": 34,
+            "named_rate": {
+              "pct": 38.2,
+              "low": 23.9,
+              "high": 55,
+              "interval": "23.9 to 55.0",
+              "base": "13 of 34 answers"
+            },
+            "series": 3
+          },
+          {
+            "run_id": "kalvenor-monitor",
+            "pass_id": "2026-08",
+            "pass_kind": "monitor",
+            "observed_on": "2026-08-12",
+            "method_version": "1.1",
+            "observed": 10,
+            "excluded": 0,
+            "named": 0,
+            "scored": 10,
+            "named_rate": {
+              "pct": 0,
+              "low": 0,
+              "high": 27.8,
+              "interval": "0.0 to 27.8",
+              "base": "0 of 10 answers"
+            },
+            "series": 2
+          }
+        ],
+        "steps": [
+          {
+            "type": "method_break",
+            "label": "Method break",
+            "before": "run-kalvenor-001",
+            "after": "2026-05",
+            "from_method": "1.0",
+            "to_method": "1.1"
+          },
+          {
+            "type": "comparison",
+            "from": {
+              "run_id": "kalvenor-monitor",
+              "pass_id": "2026-05",
+              "observed_on": "2026-05-12",
+              "named": 4,
+              "scored": 10,
+              "named_rate": {
+                "pct": 40,
+                "low": 16.8,
+                "high": 68.7,
+                "interval": "16.8 to 68.7",
+                "base": "4 of 10 answers"
+              }
+            },
+            "to": {
+              "run_id": "kalvenor-monitor",
+              "pass_id": "2026-06",
+              "observed_on": "2026-06-12",
+              "named": 1,
+              "scored": 10,
+              "named_rate": {
+                "pct": 10,
+                "low": 1.8,
+                "high": 40.4,
+                "interval": "1.8 to 40.4",
+                "base": "1 of 10 answers"
+              }
+            },
+            "direction": "none",
+            "label": "No separable change"
+          },
+          {
+            "type": "comparison",
+            "from": {
+              "run_id": "baseline-kalvenor-v11",
+              "pass_id": "run-1",
+              "observed_on": "2026-07-08",
+              "named": 11,
+              "scored": 34,
+              "named_rate": {
+                "pct": 32.4,
+                "low": 19.1,
+                "high": 49.2,
+                "interval": "19.1 to 49.2",
+                "base": "11 of 34 answers"
+              }
+            },
+            "to": {
+              "run_id": "baseline-kalvenor-v11",
+              "pass_id": "run-2",
+              "observed_on": "2026-07-10",
+              "named": 14,
+              "scored": 35,
+              "named_rate": {
+                "pct": 40,
+                "low": 25.6,
+                "high": 56.4,
+                "interval": "25.6 to 56.4",
+                "base": "14 of 35 answers"
+              }
+            },
+            "direction": "none",
+            "label": "No separable change"
+          },
+          {
+            "type": "comparison",
+            "from": {
+              "run_id": "baseline-kalvenor-v11",
+              "pass_id": "run-2",
+              "observed_on": "2026-07-10",
+              "named": 14,
+              "scored": 35,
+              "named_rate": {
+                "pct": 40,
+                "low": 25.6,
+                "high": 56.4,
+                "interval": "25.6 to 56.4",
+                "base": "14 of 35 answers"
+              }
+            },
+            "to": {
+              "run_id": "baseline-kalvenor-v11",
+              "pass_id": "run-3",
+              "observed_on": "2026-07-12",
+              "named": 13,
+              "scored": 34,
+              "named_rate": {
+                "pct": 38.2,
+                "low": 23.9,
+                "high": 55,
+                "interval": "23.9 to 55.0",
+                "base": "13 of 34 answers"
+              }
+            },
+            "direction": "none",
+            "label": "No separable change"
+          },
+          {
+            "type": "comparison",
+            "from": {
+              "run_id": "kalvenor-monitor",
+              "pass_id": "2026-06",
+              "observed_on": "2026-06-12",
+              "named": 1,
+              "scored": 10,
+              "named_rate": {
+                "pct": 10,
+                "low": 1.8,
+                "high": 40.4,
+                "interval": "1.8 to 40.4",
+                "base": "1 of 10 answers"
+              }
+            },
+            "to": {
+              "run_id": "kalvenor-monitor",
+              "pass_id": "2026-08",
+              "observed_on": "2026-08-12",
+              "named": 0,
+              "scored": 10,
+              "named_rate": {
+                "pct": 0,
+                "low": 0,
+                "high": 27.8,
+                "interval": "0.0 to 27.8",
+                "base": "0 of 10 answers"
+              }
+            },
+            "direction": "none",
+            "label": "No separable change"
+          }
+        ]
+      },
+      {
+        "scope": "engine",
+        "key": "claude",
+        "label": "Claude",
+        "series": [
+          {
+            "series": 1,
+            "label": "10 questions, 1 engines, method 1.0"
+          },
+          {
+            "series": 2,
+            "label": "10 questions, 1 engines, method 1.1"
+          },
+          {
+            "series": 3,
+            "label": "35 questions, 1 engines, method 1.1"
+          }
+        ],
+        "points": [
+          {
+            "run_id": "baseline-kalvenor-001",
+            "pass_id": "run-kalvenor-001",
+            "pass_kind": "scheduled",
+            "observed_on": "2026-01-15",
+            "method_version": "1.0",
+            "observed": 30,
+            "excluded": 0,
+            "named": 9,
+            "scored": 30,
+            "named_rate": {
+              "pct": 30,
+              "low": 16.7,
+              "high": 47.9,
+              "interval": "16.7 to 47.9",
+              "base": "9 of 30 answers"
+            },
+            "series": 1
+          },
+          {
+            "run_id": "kalvenor-monitor",
+            "pass_id": "2026-05",
+            "pass_kind": "monitor",
+            "observed_on": "2026-05-12",
+            "method_version": "1.1",
+            "observed": 10,
+            "excluded": 0,
+            "named": 4,
+            "scored": 10,
+            "named_rate": {
+              "pct": 40,
+              "low": 16.8,
+              "high": 68.7,
+              "interval": "16.8 to 68.7",
+              "base": "4 of 10 answers"
+            },
+            "series": 2
+          },
+          {
+            "run_id": "kalvenor-monitor",
+            "pass_id": "2026-06",
+            "pass_kind": "monitor",
+            "observed_on": "2026-06-12",
+            "method_version": "1.1",
+            "observed": 10,
+            "excluded": 0,
+            "named": 1,
+            "scored": 10,
+            "named_rate": {
+              "pct": 10,
+              "low": 1.8,
+              "high": 40.4,
+              "interval": "1.8 to 40.4",
+              "base": "1 of 10 answers"
+            },
+            "series": 2
+          },
+          {
+            "run_id": "baseline-kalvenor-v11",
+            "pass_id": "run-1",
+            "pass_kind": "scheduled",
+            "observed_on": "2026-07-08",
+            "method_version": "1.1",
+            "observed": 35,
+            "excluded": 0,
+            "named": 13,
+            "scored": 35,
+            "named_rate": {
+              "pct": 37.1,
+              "low": 23.2,
+              "high": 53.7,
+              "interval": "23.2 to 53.7",
+              "base": "13 of 35 answers"
+            },
+            "series": 3
+          },
+          {
+            "run_id": "baseline-kalvenor-v11",
+            "pass_id": "run-2",
+            "pass_kind": "scheduled",
+            "observed_on": "2026-07-10",
+            "method_version": "1.1",
+            "observed": 35,
+            "excluded": 0,
+            "named": 8,
+            "scored": 35,
+            "named_rate": {
+              "pct": 22.9,
+              "low": 12.1,
+              "high": 39,
+              "interval": "12.1 to 39.0",
+              "base": "8 of 35 answers"
+            },
+            "series": 3
+          },
+          {
+            "run_id": "baseline-kalvenor-v11",
+            "pass_id": "run-3",
+            "pass_kind": "scheduled",
+            "observed_on": "2026-07-12",
+            "method_version": "1.1",
+            "observed": 35,
+            "excluded": 0,
+            "named": 14,
+            "scored": 35,
+            "named_rate": {
+              "pct": 40,
+              "low": 25.6,
+              "high": 56.4,
+              "interval": "25.6 to 56.4",
+              "base": "14 of 35 answers"
+            },
+            "series": 3
+          },
+          {
+            "run_id": "kalvenor-monitor",
+            "pass_id": "2026-08",
+            "pass_kind": "monitor",
+            "observed_on": "2026-08-12",
+            "method_version": "1.1",
+            "observed": 10,
+            "excluded": 0,
+            "named": 3,
+            "scored": 10,
+            "named_rate": {
+              "pct": 30,
+              "low": 10.8,
+              "high": 60.3,
+              "interval": "10.8 to 60.3",
+              "base": "3 of 10 answers"
+            },
+            "series": 2
+          }
+        ],
+        "steps": [
+          {
+            "type": "method_break",
+            "label": "Method break",
+            "before": "run-kalvenor-001",
+            "after": "2026-05",
+            "from_method": "1.0",
+            "to_method": "1.1"
+          },
+          {
+            "type": "comparison",
+            "from": {
+              "run_id": "kalvenor-monitor",
+              "pass_id": "2026-05",
+              "observed_on": "2026-05-12",
+              "named": 4,
+              "scored": 10,
+              "named_rate": {
+                "pct": 40,
+                "low": 16.8,
+                "high": 68.7,
+                "interval": "16.8 to 68.7",
+                "base": "4 of 10 answers"
+              }
+            },
+            "to": {
+              "run_id": "kalvenor-monitor",
+              "pass_id": "2026-06",
+              "observed_on": "2026-06-12",
+              "named": 1,
+              "scored": 10,
+              "named_rate": {
+                "pct": 10,
+                "low": 1.8,
+                "high": 40.4,
+                "interval": "1.8 to 40.4",
+                "base": "1 of 10 answers"
+              }
+            },
+            "direction": "none",
+            "label": "No separable change"
+          },
+          {
+            "type": "comparison",
+            "from": {
+              "run_id": "baseline-kalvenor-v11",
+              "pass_id": "run-1",
+              "observed_on": "2026-07-08",
+              "named": 13,
+              "scored": 35,
+              "named_rate": {
+                "pct": 37.1,
+                "low": 23.2,
+                "high": 53.7,
+                "interval": "23.2 to 53.7",
+                "base": "13 of 35 answers"
+              }
+            },
+            "to": {
+              "run_id": "baseline-kalvenor-v11",
+              "pass_id": "run-2",
+              "observed_on": "2026-07-10",
+              "named": 8,
+              "scored": 35,
+              "named_rate": {
+                "pct": 22.9,
+                "low": 12.1,
+                "high": 39,
+                "interval": "12.1 to 39.0",
+                "base": "8 of 35 answers"
+              }
+            },
+            "direction": "none",
+            "label": "No separable change"
+          },
+          {
+            "type": "comparison",
+            "from": {
+              "run_id": "baseline-kalvenor-v11",
+              "pass_id": "run-2",
+              "observed_on": "2026-07-10",
+              "named": 8,
+              "scored": 35,
+              "named_rate": {
+                "pct": 22.9,
+                "low": 12.1,
+                "high": 39,
+                "interval": "12.1 to 39.0",
+                "base": "8 of 35 answers"
+              }
+            },
+            "to": {
+              "run_id": "baseline-kalvenor-v11",
+              "pass_id": "run-3",
+              "observed_on": "2026-07-12",
+              "named": 14,
+              "scored": 35,
+              "named_rate": {
+                "pct": 40,
+                "low": 25.6,
+                "high": 56.4,
+                "interval": "25.6 to 56.4",
+                "base": "14 of 35 answers"
+              }
+            },
+            "direction": "none",
+            "label": "No separable change"
+          },
+          {
+            "type": "comparison",
+            "from": {
+              "run_id": "kalvenor-monitor",
+              "pass_id": "2026-06",
+              "observed_on": "2026-06-12",
+              "named": 1,
+              "scored": 10,
+              "named_rate": {
+                "pct": 10,
+                "low": 1.8,
+                "high": 40.4,
+                "interval": "1.8 to 40.4",
+                "base": "1 of 10 answers"
+              }
+            },
+            "to": {
+              "run_id": "kalvenor-monitor",
+              "pass_id": "2026-08",
+              "observed_on": "2026-08-12",
+              "named": 3,
+              "scored": 10,
+              "named_rate": {
+                "pct": 30,
+                "low": 10.8,
+                "high": 60.3,
+                "interval": "10.8 to 60.3",
+                "base": "3 of 10 answers"
+              }
+            },
+            "direction": "none",
+            "label": "No separable change"
+          }
+        ]
+      },
+      {
+        "scope": "engine",
+        "key": "perplexity",
+        "label": "Perplexity",
+        "series": [
+          {
+            "series": 1,
+            "label": "10 questions, 1 engines, method 1.0"
+          },
+          {
+            "series": 2,
+            "label": "10 questions, 1 engines, method 1.1"
+          },
+          {
+            "series": 3,
+            "label": "35 questions, 1 engines, method 1.1"
+          }
+        ],
+        "points": [
+          {
+            "run_id": "baseline-kalvenor-001",
+            "pass_id": "run-kalvenor-001",
+            "pass_kind": "scheduled",
+            "observed_on": "2026-01-15",
+            "method_version": "1.0",
+            "observed": 30,
+            "excluded": 0,
+            "named": 8,
+            "scored": 30,
+            "named_rate": {
+              "pct": 26.7,
+              "low": 14.2,
+              "high": 44.4,
+              "interval": "14.2 to 44.4",
+              "base": "8 of 30 answers"
+            },
+            "series": 1
+          },
+          {
+            "run_id": "kalvenor-monitor",
+            "pass_id": "2026-05",
+            "pass_kind": "monitor",
+            "observed_on": "2026-05-12",
+            "method_version": "1.1",
+            "observed": 10,
+            "excluded": 0,
+            "named": 4,
+            "scored": 10,
+            "named_rate": {
+              "pct": 40,
+              "low": 16.8,
+              "high": 68.7,
+              "interval": "16.8 to 68.7",
+              "base": "4 of 10 answers"
+            },
+            "series": 2
+          },
+          {
+            "run_id": "kalvenor-monitor",
+            "pass_id": "2026-06",
+            "pass_kind": "monitor",
+            "observed_on": "2026-06-12",
+            "method_version": "1.1",
+            "observed": 10,
+            "excluded": 0,
+            "named": 1,
+            "scored": 10,
+            "named_rate": {
+              "pct": 10,
+              "low": 1.8,
+              "high": 40.4,
+              "interval": "1.8 to 40.4",
+              "base": "1 of 10 answers"
+            },
+            "series": 2
+          },
+          {
+            "run_id": "baseline-kalvenor-v11",
+            "pass_id": "run-1",
+            "pass_kind": "scheduled",
+            "observed_on": "2026-07-08",
+            "method_version": "1.1",
+            "observed": 35,
+            "excluded": 1,
+            "named": 10,
+            "scored": 34,
+            "named_rate": {
+              "pct": 29.4,
+              "low": 16.8,
+              "high": 46.2,
+              "interval": "16.8 to 46.2",
+              "base": "10 of 34 answers"
+            },
+            "series": 3
+          },
+          {
+            "run_id": "baseline-kalvenor-v11",
+            "pass_id": "run-2",
+            "pass_kind": "scheduled",
+            "observed_on": "2026-07-10",
+            "method_version": "1.1",
+            "observed": 35,
+            "excluded": 0,
+            "named": 6,
+            "scored": 35,
+            "named_rate": {
+              "pct": 17.1,
+              "low": 8.1,
+              "high": 32.7,
+              "interval": "8.1 to 32.7",
+              "base": "6 of 35 answers"
+            },
+            "series": 3
+          },
+          {
+            "run_id": "baseline-kalvenor-v11",
+            "pass_id": "run-3",
+            "pass_kind": "scheduled",
+            "observed_on": "2026-07-12",
+            "method_version": "1.1",
+            "observed": 35,
+            "excluded": 0,
+            "named": 8,
+            "scored": 35,
+            "named_rate": {
+              "pct": 22.9,
+              "low": 12.1,
+              "high": 39,
+              "interval": "12.1 to 39.0",
+              "base": "8 of 35 answers"
+            },
+            "series": 3
+          },
+          {
+            "run_id": "kalvenor-monitor",
+            "pass_id": "2026-08",
+            "pass_kind": "monitor",
+            "observed_on": "2026-08-12",
+            "method_version": "1.1",
+            "observed": 10,
+            "excluded": 0,
+            "named": 1,
+            "scored": 10,
+            "named_rate": {
+              "pct": 10,
+              "low": 1.8,
+              "high": 40.4,
+              "interval": "1.8 to 40.4",
+              "base": "1 of 10 answers"
+            },
+            "series": 2
+          }
+        ],
+        "steps": [
+          {
+            "type": "method_break",
+            "label": "Method break",
+            "before": "run-kalvenor-001",
+            "after": "2026-05",
+            "from_method": "1.0",
+            "to_method": "1.1"
+          },
+          {
+            "type": "comparison",
+            "from": {
+              "run_id": "kalvenor-monitor",
+              "pass_id": "2026-05",
+              "observed_on": "2026-05-12",
+              "named": 4,
+              "scored": 10,
+              "named_rate": {
+                "pct": 40,
+                "low": 16.8,
+                "high": 68.7,
+                "interval": "16.8 to 68.7",
+                "base": "4 of 10 answers"
+              }
+            },
+            "to": {
+              "run_id": "kalvenor-monitor",
+              "pass_id": "2026-06",
+              "observed_on": "2026-06-12",
+              "named": 1,
+              "scored": 10,
+              "named_rate": {
+                "pct": 10,
+                "low": 1.8,
+                "high": 40.4,
+                "interval": "1.8 to 40.4",
+                "base": "1 of 10 answers"
+              }
+            },
+            "direction": "none",
+            "label": "No separable change"
+          },
+          {
+            "type": "comparison",
+            "from": {
+              "run_id": "baseline-kalvenor-v11",
+              "pass_id": "run-1",
+              "observed_on": "2026-07-08",
+              "named": 10,
+              "scored": 34,
+              "named_rate": {
+                "pct": 29.4,
+                "low": 16.8,
+                "high": 46.2,
+                "interval": "16.8 to 46.2",
+                "base": "10 of 34 answers"
+              }
+            },
+            "to": {
+              "run_id": "baseline-kalvenor-v11",
+              "pass_id": "run-2",
+              "observed_on": "2026-07-10",
+              "named": 6,
+              "scored": 35,
+              "named_rate": {
+                "pct": 17.1,
+                "low": 8.1,
+                "high": 32.7,
+                "interval": "8.1 to 32.7",
+                "base": "6 of 35 answers"
+              }
+            },
+            "direction": "none",
+            "label": "No separable change"
+          },
+          {
+            "type": "comparison",
+            "from": {
+              "run_id": "baseline-kalvenor-v11",
+              "pass_id": "run-2",
+              "observed_on": "2026-07-10",
+              "named": 6,
+              "scored": 35,
+              "named_rate": {
+                "pct": 17.1,
+                "low": 8.1,
+                "high": 32.7,
+                "interval": "8.1 to 32.7",
+                "base": "6 of 35 answers"
+              }
+            },
+            "to": {
+              "run_id": "baseline-kalvenor-v11",
+              "pass_id": "run-3",
+              "observed_on": "2026-07-12",
+              "named": 8,
+              "scored": 35,
+              "named_rate": {
+                "pct": 22.9,
+                "low": 12.1,
+                "high": 39,
+                "interval": "12.1 to 39.0",
+                "base": "8 of 35 answers"
+              }
+            },
+            "direction": "none",
+            "label": "No separable change"
+          },
+          {
+            "type": "comparison",
+            "from": {
+              "run_id": "kalvenor-monitor",
+              "pass_id": "2026-06",
+              "observed_on": "2026-06-12",
+              "named": 1,
+              "scored": 10,
+              "named_rate": {
+                "pct": 10,
+                "low": 1.8,
+                "high": 40.4,
+                "interval": "1.8 to 40.4",
+                "base": "1 of 10 answers"
+              }
+            },
+            "to": {
+              "run_id": "kalvenor-monitor",
+              "pass_id": "2026-08",
+              "observed_on": "2026-08-12",
+              "named": 1,
+              "scored": 10,
+              "named_rate": {
+                "pct": 10,
+                "low": 1.8,
+                "high": 40.4,
+                "interval": "1.8 to 40.4",
+                "base": "1 of 10 answers"
+              }
+            },
+            "direction": "none",
+            "label": "No separable change"
+          }
+        ]
+      },
+      {
+        "scope": "engine",
+        "key": "google_aio",
+        "label": "Google AI Overviews",
+        "series": [
+          {
+            "series": 1,
+            "label": "10 questions, 1 engines, method 1.0"
+          },
+          {
+            "series": 2,
+            "label": "10 questions, 1 engines, method 1.1"
+          },
+          {
+            "series": 3,
+            "label": "35 questions, 1 engines, method 1.1"
+          }
+        ],
+        "points": [
+          {
+            "run_id": "baseline-kalvenor-001",
+            "pass_id": "run-kalvenor-001",
+            "pass_kind": "scheduled",
+            "observed_on": "2026-01-15",
+            "method_version": "1.0",
+            "observed": 30,
+            "excluded": 3,
+            "named": 2,
+            "scored": 27,
+            "named_rate": {
+              "pct": 7.4,
+              "low": 2.1,
+              "high": 23.4,
+              "interval": "2.1 to 23.4",
+              "base": "2 of 27 answers"
+            },
+            "series": 1
+          },
+          {
+            "run_id": "kalvenor-monitor",
+            "pass_id": "2026-05",
+            "pass_kind": "monitor",
+            "observed_on": "2026-05-12",
+            "method_version": "1.1",
+            "observed": 10,
+            "excluded": 0,
+            "named": 4,
+            "scored": 10,
+            "named_rate": {
+              "pct": 40,
+              "low": 16.8,
+              "high": 68.7,
+              "interval": "16.8 to 68.7",
+              "base": "4 of 10 answers"
+            },
+            "series": 2
+          },
+          {
+            "run_id": "kalvenor-monitor",
+            "pass_id": "2026-06",
+            "pass_kind": "monitor",
+            "observed_on": "2026-06-12",
+            "method_version": "1.1",
+            "observed": 10,
+            "excluded": 0,
+            "named": 0,
+            "scored": 10,
+            "named_rate": {
+              "pct": 0,
+              "low": 0,
+              "high": 27.8,
+              "interval": "0.0 to 27.8",
+              "base": "0 of 10 answers"
+            },
+            "series": 2
+          },
+          {
+            "run_id": "baseline-kalvenor-v11",
+            "pass_id": "run-1",
+            "pass_kind": "scheduled",
+            "observed_on": "2026-07-08",
+            "method_version": "1.1",
+            "observed": 35,
+            "excluded": 0,
+            "named": 4,
+            "scored": 35,
+            "named_rate": {
+              "pct": 11.4,
+              "low": 4.5,
+              "high": 26,
+              "interval": "4.5 to 26.0",
+              "base": "4 of 35 answers"
+            },
+            "series": 3
+          },
+          {
+            "run_id": "baseline-kalvenor-v11",
+            "pass_id": "run-2",
+            "pass_kind": "scheduled",
+            "observed_on": "2026-07-10",
+            "method_version": "1.1",
+            "observed": 35,
+            "excluded": 1,
+            "named": 5,
+            "scored": 34,
+            "named_rate": {
+              "pct": 14.7,
+              "low": 6.4,
+              "high": 30.1,
+              "interval": "6.4 to 30.1",
+              "base": "5 of 34 answers"
+            },
+            "series": 3
+          },
+          {
+            "run_id": "baseline-kalvenor-v11",
+            "pass_id": "run-3",
+            "pass_kind": "scheduled",
+            "observed_on": "2026-07-12",
+            "method_version": "1.1",
+            "observed": 35,
+            "excluded": 1,
+            "named": 0,
+            "scored": 34,
+            "named_rate": {
+              "pct": 0,
+              "low": 0,
+              "high": 10.2,
+              "interval": "0.0 to 10.2",
+              "base": "0 of 34 answers"
+            },
+            "series": 3
+          },
+          {
+            "run_id": "kalvenor-monitor",
+            "pass_id": "2026-08",
+            "pass_kind": "monitor",
+            "observed_on": "2026-08-12",
+            "method_version": "1.1",
+            "observed": 10,
+            "excluded": 0,
+            "named": 2,
+            "scored": 10,
+            "named_rate": {
+              "pct": 20,
+              "low": 5.7,
+              "high": 51,
+              "interval": "5.7 to 51.0",
+              "base": "2 of 10 answers"
+            },
+            "series": 2
+          }
+        ],
+        "steps": [
+          {
+            "type": "method_break",
+            "label": "Method break",
+            "before": "run-kalvenor-001",
+            "after": "2026-05",
+            "from_method": "1.0",
+            "to_method": "1.1"
+          },
+          {
+            "type": "comparison",
+            "from": {
+              "run_id": "kalvenor-monitor",
+              "pass_id": "2026-05",
+              "observed_on": "2026-05-12",
+              "named": 4,
+              "scored": 10,
+              "named_rate": {
+                "pct": 40,
+                "low": 16.8,
+                "high": 68.7,
+                "interval": "16.8 to 68.7",
+                "base": "4 of 10 answers"
+              }
+            },
+            "to": {
+              "run_id": "kalvenor-monitor",
+              "pass_id": "2026-06",
+              "observed_on": "2026-06-12",
+              "named": 0,
+              "scored": 10,
+              "named_rate": {
+                "pct": 0,
+                "low": 0,
+                "high": 27.8,
+                "interval": "0.0 to 27.8",
+                "base": "0 of 10 answers"
+              }
+            },
+            "direction": "none",
+            "label": "No separable change"
+          },
+          {
+            "type": "comparison",
+            "from": {
+              "run_id": "baseline-kalvenor-v11",
+              "pass_id": "run-1",
+              "observed_on": "2026-07-08",
+              "named": 4,
+              "scored": 35,
+              "named_rate": {
+                "pct": 11.4,
+                "low": 4.5,
+                "high": 26,
+                "interval": "4.5 to 26.0",
+                "base": "4 of 35 answers"
+              }
+            },
+            "to": {
+              "run_id": "baseline-kalvenor-v11",
+              "pass_id": "run-2",
+              "observed_on": "2026-07-10",
+              "named": 5,
+              "scored": 34,
+              "named_rate": {
+                "pct": 14.7,
+                "low": 6.4,
+                "high": 30.1,
+                "interval": "6.4 to 30.1",
+                "base": "5 of 34 answers"
+              }
+            },
+            "direction": "none",
+            "label": "No separable change"
+          },
+          {
+            "type": "comparison",
+            "from": {
+              "run_id": "baseline-kalvenor-v11",
+              "pass_id": "run-2",
+              "observed_on": "2026-07-10",
+              "named": 5,
+              "scored": 34,
+              "named_rate": {
+                "pct": 14.7,
+                "low": 6.4,
+                "high": 30.1,
+                "interval": "6.4 to 30.1",
+                "base": "5 of 34 answers"
+              }
+            },
+            "to": {
+              "run_id": "baseline-kalvenor-v11",
+              "pass_id": "run-3",
+              "observed_on": "2026-07-12",
+              "named": 0,
+              "scored": 34,
+              "named_rate": {
+                "pct": 0,
+                "low": 0,
+                "high": 10.2,
+                "interval": "0.0 to 10.2",
+                "base": "0 of 34 answers"
+              }
+            },
+            "direction": "none",
+            "label": "No separable change"
+          },
+          {
+            "type": "comparison",
+            "from": {
+              "run_id": "kalvenor-monitor",
+              "pass_id": "2026-06",
+              "observed_on": "2026-06-12",
+              "named": 0,
+              "scored": 10,
+              "named_rate": {
+                "pct": 0,
+                "low": 0,
+                "high": 27.8,
+                "interval": "0.0 to 27.8",
+                "base": "0 of 10 answers"
+              }
+            },
+            "to": {
+              "run_id": "kalvenor-monitor",
+              "pass_id": "2026-08",
+              "observed_on": "2026-08-12",
+              "named": 2,
+              "scored": 10,
+              "named_rate": {
+                "pct": 20,
+                "low": 5.7,
+                "high": 51,
+                "interval": "5.7 to 51.0",
+                "base": "2 of 10 answers"
+              }
+            },
+            "direction": "none",
+            "label": "No separable change"
+          }
+        ]
+      },
+      {
+        "scope": "engine",
+        "key": "google_ai_mode",
+        "label": "Google AI Mode",
+        "series": [
+          {
+            "series": 1,
+            "label": "10 questions, 1 engines, method 1.1"
+          },
+          {
+            "series": 2,
+            "label": "35 questions, 1 engines, method 1.1"
+          }
+        ],
+        "points": [
+          {
+            "run_id": "kalvenor-monitor",
+            "pass_id": "2026-05",
+            "pass_kind": "monitor",
+            "observed_on": "2026-05-12",
+            "method_version": "1.1",
+            "observed": 10,
+            "excluded": 0,
+            "named": 4,
+            "scored": 10,
+            "named_rate": {
+              "pct": 40,
+              "low": 16.8,
+              "high": 68.7,
+              "interval": "16.8 to 68.7",
+              "base": "4 of 10 answers"
+            },
+            "series": 1
+          },
+          {
+            "run_id": "kalvenor-monitor",
+            "pass_id": "2026-06",
+            "pass_kind": "monitor",
+            "observed_on": "2026-06-12",
+            "method_version": "1.1",
+            "observed": 10,
+            "excluded": 0,
+            "named": 0,
+            "scored": 10,
+            "named_rate": {
+              "pct": 0,
+              "low": 0,
+              "high": 27.8,
+              "interval": "0.0 to 27.8",
+              "base": "0 of 10 answers"
+            },
+            "series": 1
+          },
+          {
+            "run_id": "baseline-kalvenor-v11",
+            "pass_id": "run-1",
+            "pass_kind": "scheduled",
+            "observed_on": "2026-07-08",
+            "method_version": "1.1",
+            "observed": 35,
+            "excluded": 2,
+            "named": 5,
+            "scored": 33,
+            "named_rate": {
+              "pct": 15.2,
+              "low": 6.7,
+              "high": 30.9,
+              "interval": "6.7 to 30.9",
+              "base": "5 of 33 answers"
+            },
+            "series": 2
+          },
+          {
+            "run_id": "baseline-kalvenor-v11",
+            "pass_id": "run-2",
+            "pass_kind": "scheduled",
+            "observed_on": "2026-07-10",
+            "method_version": "1.1",
+            "observed": 35,
+            "excluded": 0,
+            "named": 7,
+            "scored": 35,
+            "named_rate": {
+              "pct": 20,
+              "low": 10,
+              "high": 35.9,
+              "interval": "10.0 to 35.9",
+              "base": "7 of 35 answers"
+            },
+            "series": 2
+          },
+          {
+            "run_id": "baseline-kalvenor-v11",
+            "pass_id": "run-3",
+            "pass_kind": "scheduled",
+            "observed_on": "2026-07-12",
+            "method_version": "1.1",
+            "observed": 35,
+            "excluded": 0,
+            "named": 7,
+            "scored": 35,
+            "named_rate": {
+              "pct": 20,
+              "low": 10,
+              "high": 35.9,
+              "interval": "10.0 to 35.9",
+              "base": "7 of 35 answers"
+            },
+            "series": 2
+          },
+          {
+            "run_id": "kalvenor-monitor",
+            "pass_id": "2026-08",
+            "pass_kind": "monitor",
+            "observed_on": "2026-08-12",
+            "method_version": "1.1",
+            "observed": 10,
+            "excluded": 0,
+            "named": 1,
+            "scored": 10,
+            "named_rate": {
+              "pct": 10,
+              "low": 1.8,
+              "high": 40.4,
+              "interval": "1.8 to 40.4",
+              "base": "1 of 10 answers"
+            },
+            "series": 1
+          }
+        ],
+        "steps": [
+          {
+            "type": "comparison",
+            "from": {
+              "run_id": "kalvenor-monitor",
+              "pass_id": "2026-05",
+              "observed_on": "2026-05-12",
+              "named": 4,
+              "scored": 10,
+              "named_rate": {
+                "pct": 40,
+                "low": 16.8,
+                "high": 68.7,
+                "interval": "16.8 to 68.7",
+                "base": "4 of 10 answers"
+              }
+            },
+            "to": {
+              "run_id": "kalvenor-monitor",
+              "pass_id": "2026-06",
+              "observed_on": "2026-06-12",
+              "named": 0,
+              "scored": 10,
+              "named_rate": {
+                "pct": 0,
+                "low": 0,
+                "high": 27.8,
+                "interval": "0.0 to 27.8",
+                "base": "0 of 10 answers"
+              }
+            },
+            "direction": "none",
+            "label": "No separable change"
+          },
+          {
+            "type": "comparison",
+            "from": {
+              "run_id": "baseline-kalvenor-v11",
+              "pass_id": "run-1",
+              "observed_on": "2026-07-08",
+              "named": 5,
+              "scored": 33,
+              "named_rate": {
+                "pct": 15.2,
+                "low": 6.7,
+                "high": 30.9,
+                "interval": "6.7 to 30.9",
+                "base": "5 of 33 answers"
+              }
+            },
+            "to": {
+              "run_id": "baseline-kalvenor-v11",
+              "pass_id": "run-2",
+              "observed_on": "2026-07-10",
+              "named": 7,
+              "scored": 35,
+              "named_rate": {
+                "pct": 20,
+                "low": 10,
+                "high": 35.9,
+                "interval": "10.0 to 35.9",
+                "base": "7 of 35 answers"
+              }
+            },
+            "direction": "none",
+            "label": "No separable change"
+          },
+          {
+            "type": "comparison",
+            "from": {
+              "run_id": "baseline-kalvenor-v11",
+              "pass_id": "run-2",
+              "observed_on": "2026-07-10",
+              "named": 7,
+              "scored": 35,
+              "named_rate": {
+                "pct": 20,
+                "low": 10,
+                "high": 35.9,
+                "interval": "10.0 to 35.9",
+                "base": "7 of 35 answers"
+              }
+            },
+            "to": {
+              "run_id": "baseline-kalvenor-v11",
+              "pass_id": "run-3",
+              "observed_on": "2026-07-12",
+              "named": 7,
+              "scored": 35,
+              "named_rate": {
+                "pct": 20,
+                "low": 10,
+                "high": 35.9,
+                "interval": "10.0 to 35.9",
+                "base": "7 of 35 answers"
+              }
+            },
+            "direction": "none",
+            "label": "No separable change"
+          },
+          {
+            "type": "comparison",
+            "from": {
+              "run_id": "kalvenor-monitor",
+              "pass_id": "2026-06",
+              "observed_on": "2026-06-12",
+              "named": 0,
+              "scored": 10,
+              "named_rate": {
+                "pct": 0,
+                "low": 0,
+                "high": 27.8,
+                "interval": "0.0 to 27.8",
+                "base": "0 of 10 answers"
+              }
+            },
+            "to": {
+              "run_id": "kalvenor-monitor",
+              "pass_id": "2026-08",
+              "observed_on": "2026-08-12",
+              "named": 1,
+              "scored": 10,
+              "named_rate": {
+                "pct": 10,
+                "low": 1.8,
+                "high": 40.4,
+                "interval": "1.8 to 40.4",
+                "base": "1 of 10 answers"
+              }
+            },
+            "direction": "none",
+            "label": "No separable change"
+          }
+        ]
+      }
+    ]
+  }
+}

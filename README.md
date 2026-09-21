@@ -19,7 +19,7 @@ Put your AI answer measurements where your team already works.
 | JavaScript API client | [`packages/api`](packages/api) | `@broadcastwell/api`: a dependency free client for Node, browsers and Google Apps Script, with paging, typed responses and webhook signature verification. |
 | n8n nodes | [`packages/n8n-nodes-broadcastwell`](packages/n8n-nodes-broadcastwell) | `n8n-nodes-broadcastwell`: a Broadcastwell node for every read operation and a Broadcastwell Trigger for signed webhooks. |
 | Looker Studio connector | [`looker-studio/`](looker-studio/) | Broadcastwell measurements as a Looker Studio data source. |
-| Slack app | [`slack/`](slack/) | Broadcastwell alerts and run results in Slack. |
+| Slack app | [`slack/`](slack/) | The /broadcastwell command: your latest scheduled run, with its interval, in Slack. |
 | ChatGPT and Claude connector | [app.broadcastwell.com/developers](https://app.broadcastwell.com/developers) | Ask ChatGPT or Claude about your measurements, with receipts. |
 
 ## Looker Studio connector

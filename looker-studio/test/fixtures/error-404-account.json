@@ -1,0 +1,18 @@
+{
+  "_note": "Captured from the live Broadcastwell API with the public demo key. Kalvenor is fictional sample data.",
+  "captured_on": "2026-09-21",
+  "request": "GET /accounts/not-an-account/runs",
+  "status": 404,
+  "headers": {
+    "content-type": "application/problem+json; charset=utf-8",
+    "ratelimit-limit": "30",
+    "ratelimit-remaining": "18"
+  },
+  "body": {
+    "type": "https://app.broadcastwell.com/developers#error-not_found",
+    "title": "Not found",
+    "status": 404,
+    "code": "not_found",
+    "detail": "No account with that id is available to this key. List the parent collection to see the ids this key can read."
+  }
+}

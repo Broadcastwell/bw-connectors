@@ -1,0 +1,45 @@
+{
+  "_metadata": {
+    "major_version": 1,
+    "minor_version": 1
+  },
+  "display_information": {
+    "name": "Broadcastwell",
+    "description": "See which AI engines name your company, and who they name instead.",
+    "background_color": "#1D4ED8",
+    "long_description": "Broadcastwell measures whether ChatGPT, Claude, Perplexity, Google AI Overviews and Google AI Mode name your company when buyers ask shortlist questions. Type /broadcastwell status to see your latest scheduled run: how many answers named you, out of how many, with the 95% interval. Type /broadcastwell sample to try it on the fictional Kalvenor Systems sample without an account. /broadcastwell connect links the workspace to your Broadcastwell account through a sign in you approve; the link reads only and you can disconnect it at any time."
+  },
+  "features": {
+    "slash_commands": [
+      {
+        "command": "/broadcastwell",
+        "url": "https://app.broadcastwell.com/slack/commands",
+        "description": "Your latest scheduled run, or the fictional sample",
+        "usage_hint": "status | sample | connect | disconnect",
+        "should_escape": false
+      }
+    ]
+  },
+  "oauth_config": {
+    "redirect_urls": [
+      "https://app.broadcastwell.com/slack/oauth/callback"
+    ],
+    "scopes": {
+      "bot": [
+        "commands"
+      ]
+    }
+  },
+  "settings": {
+    "org_deploy_enabled": false,
+    "socket_mode_enabled": false,
+    "token_rotation_enabled": false,
+    "event_subscriptions": {
+      "request_url": "https://app.broadcastwell.com/slack/events",
+      "bot_events": [
+        "app_uninstalled",
+        "tokens_revoked"
+      ]
+    }
+  }
+}

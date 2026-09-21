@@ -1,0 +1,18 @@
+{
+  "_note": "Captured from the live Broadcastwell API with the public demo key. Kalvenor is fictional sample data.",
+  "captured_on": "2026-09-21",
+  "request": "GET /accounts/sample/runs?limit=500",
+  "status": 400,
+  "headers": {
+    "content-type": "application/problem+json; charset=utf-8",
+    "ratelimit-limit": "30",
+    "ratelimit-remaining": "26"
+  },
+  "body": {
+    "type": "https://app.broadcastwell.com/developers#error-invalid_parameter",
+    "title": "Invalid parameter",
+    "status": 400,
+    "code": "invalid_parameter",
+    "detail": "limit must be a whole number from 1 to 100. Correct the parameter and retry."
+  }
+}

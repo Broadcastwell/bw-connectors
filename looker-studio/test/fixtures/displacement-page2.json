@@ -1,0 +1,590 @@
+{
+  "_note": "Captured from the live Broadcastwell API with the public demo key. Kalvenor is fictional sample data.",
+  "captured_on": "2026-09-21",
+  "request": "GET /accounts/sample/runs/kalvenor-monitor/displacement?limit=3&cursor=YzE6Mw",
+  "status": 200,
+  "headers": {
+    "content-type": "application/json; charset=utf-8",
+    "ratelimit-limit": "30",
+    "ratelimit-remaining": "29"
+  },
+  "body": {
+    "sample": true,
+    "notice": "Sample data. Kalvenor Systems is a fictional company.",
+    "run_id": "kalvenor-monitor",
+    "scored": 150,
+    "client_absent": 120,
+    "named_instead": [
+      {
+        "name": "Northvale FSM",
+        "answers": 94,
+        "of": 120
+      },
+      {
+        "name": "Trakwell",
+        "answers": 38,
+        "of": 120
+      },
+      {
+        "name": "Asterforge",
+        "answers": 32,
+        "of": 120
+      },
+      {
+        "name": "Orbit Field",
+        "answers": 22,
+        "of": 120
+      },
+      {
+        "name": "Cindermark",
+        "answers": 19,
+        "of": 120
+      },
+      {
+        "name": "Verano FSM",
+        "answers": 15,
+        "of": 120
+      }
+    ],
+    "data": [
+      {
+        "question_id": 4,
+        "question_text": "What features should field service management software include?",
+        "question_type": "core",
+        "scored": 15,
+        "client_named": 3,
+        "client_absent": 12,
+        "competitors": [
+          {
+            "name": "Northvale FSM",
+            "checked_in": 15,
+            "named": 11,
+            "named_instead": 8,
+            "status": "named"
+          },
+          {
+            "name": "Trakwell",
+            "checked_in": 15,
+            "named": 9,
+            "named_instead": 7,
+            "status": "named"
+          },
+          {
+            "name": "Orbit Field",
+            "checked_in": 15,
+            "named": 7,
+            "named_instead": 6,
+            "status": "named"
+          },
+          {
+            "name": "Asterforge",
+            "checked_in": 15,
+            "named": 0,
+            "named_instead": 0,
+            "status": "checked_not_found"
+          },
+          {
+            "name": "Cindermark",
+            "checked_in": 15,
+            "named": 0,
+            "named_instead": 0,
+            "status": "checked_not_found"
+          },
+          {
+            "name": "Verano FSM",
+            "checked_in": 15,
+            "named": 0,
+            "named_instead": 0,
+            "status": "checked_not_found"
+          }
+        ],
+        "checklist": "complete",
+        "per_engine": {
+          "chatgpt": {
+            "label": "ChatGPT",
+            "scored": 3,
+            "client_named": 0,
+            "named_instead": [
+              {
+                "name": "Northvale FSM",
+                "count": 3
+              },
+              {
+                "name": "Trakwell",
+                "count": 2
+              },
+              {
+                "name": "Orbit Field",
+                "count": 1
+              }
+            ],
+            "receipt_ids": [
+              "observation-4d4d6f8f-7315-475f-9021-8afe0869d806",
+              "observation-604a3c4e-3302-4ec8-b6d1-fe0145b4987b",
+              "observation-81daf88d-3341-448e-90df-8888a8d6fefe"
+            ]
+          },
+          "claude": {
+            "label": "Claude",
+            "scored": 3,
+            "client_named": 2,
+            "named_instead": [
+              {
+                "name": "Northvale FSM",
+                "count": 1
+              },
+              {
+                "name": "Orbit Field",
+                "count": 1
+              },
+              {
+                "name": "Trakwell",
+                "count": 1
+              }
+            ],
+            "receipt_ids": [
+              "observation-7aefebd9-cec8-4dbb-a0dd-cde287f9c090",
+              "observation-9298b1a8-cd34-478d-be7b-94ff6ba18758",
+              "observation-c49747d6-15bb-4910-b5ab-7911e644a10d"
+            ]
+          },
+          "perplexity": {
+            "label": "Perplexity",
+            "scored": 3,
+            "client_named": 1,
+            "named_instead": [
+              {
+                "name": "Trakwell",
+                "count": 2
+              },
+              {
+                "name": "Northvale FSM",
+                "count": 1
+              }
+            ],
+            "receipt_ids": [
+              "observation-5b5859b3-10b2-41d6-af80-34273186f15a",
+              "observation-7beaac61-bf6d-4380-94cc-dc2943f70e93",
+              "observation-283fd675-6ffc-4210-ae4b-1bf6b3893971"
+            ]
+          },
+          "google_aio": {
+            "label": "Google AI Overviews",
+            "scored": 3,
+            "client_named": 0,
+            "named_instead": [
+              {
+                "name": "Northvale FSM",
+                "count": 2
+              },
+              {
+                "name": "Orbit Field",
+                "count": 1
+              }
+            ],
+            "receipt_ids": [
+              "observation-b4e4bdbc-88c3-4880-b46d-aba5d272dc03",
+              "observation-1d7f5e38-89aa-4cbd-93c0-f96556907db3",
+              "observation-e5434591-8670-431e-bd69-3404316ef141"
+            ]
+          },
+          "google_ai_mode": {
+            "label": "Google AI Mode",
+            "scored": 3,
+            "client_named": 0,
+            "named_instead": [
+              {
+                "name": "Orbit Field",
+                "count": 3
+              },
+              {
+                "name": "Trakwell",
+                "count": 2
+              },
+              {
+                "name": "Northvale FSM",
+                "count": 1
+              }
+            ],
+            "receipt_ids": [
+              "observation-48d49e13-ef61-4a78-833f-abbedb8c2adb",
+              "observation-728a7717-6ef7-459c-90e1-1b03b674a311",
+              "observation-c38c268b-734e-4944-b4cc-e1d502af4669"
+            ]
+          }
+        }
+      },
+      {
+        "question_id": 5,
+        "question_text": "How does field service management software differ from general work order software?",
+        "question_type": "core",
+        "scored": 15,
+        "client_named": 2,
+        "client_absent": 13,
+        "competitors": [
+          {
+            "name": "Northvale FSM",
+            "checked_in": 15,
+            "named": 11,
+            "named_instead": 9,
+            "status": "named"
+          },
+          {
+            "name": "Asterforge",
+            "checked_in": 15,
+            "named": 8,
+            "named_instead": 8,
+            "status": "named"
+          },
+          {
+            "name": "Orbit Field",
+            "checked_in": 15,
+            "named": 8,
+            "named_instead": 7,
+            "status": "named"
+          },
+          {
+            "name": "Verano FSM",
+            "checked_in": 15,
+            "named": 8,
+            "named_instead": 7,
+            "status": "named"
+          },
+          {
+            "name": "Cindermark",
+            "checked_in": 15,
+            "named": 6,
+            "named_instead": 5,
+            "status": "named"
+          },
+          {
+            "name": "Trakwell",
+            "checked_in": 15,
+            "named": 0,
+            "named_instead": 0,
+            "status": "checked_not_found"
+          }
+        ],
+        "checklist": "complete",
+        "per_engine": {
+          "chatgpt": {
+            "label": "ChatGPT",
+            "scored": 3,
+            "client_named": 1,
+            "named_instead": [
+              {
+                "name": "Northvale FSM",
+                "count": 2
+              },
+              {
+                "name": "Asterforge",
+                "count": 1
+              },
+              {
+                "name": "Cindermark",
+                "count": 1
+              },
+              {
+                "name": "Orbit Field",
+                "count": 1
+              },
+              {
+                "name": "Verano FSM",
+                "count": 1
+              }
+            ],
+            "receipt_ids": [
+              "observation-6851c6d3-04ca-4072-a374-1a713dffc2ee",
+              "observation-5c57b4a1-aa99-46fc-9167-0dd742f1e32b",
+              "observation-afb7f461-778e-4534-a081-2f8fb76b6128"
+            ]
+          },
+          "claude": {
+            "label": "Claude",
+            "scored": 3,
+            "client_named": 1,
+            "named_instead": [
+              {
+                "name": "Asterforge",
+                "count": 2
+              },
+              {
+                "name": "Northvale FSM",
+                "count": 1
+              },
+              {
+                "name": "Orbit Field",
+                "count": 1
+              },
+              {
+                "name": "Verano FSM",
+                "count": 1
+              }
+            ],
+            "receipt_ids": [
+              "observation-b085463d-126c-4707-91a9-a0f057c1b3c4",
+              "observation-90305f3b-be8d-4e29-b9eb-95767c26be18",
+              "observation-47a37152-7ee1-4174-9619-68232dd41461"
+            ]
+          },
+          "perplexity": {
+            "label": "Perplexity",
+            "scored": 3,
+            "client_named": 0,
+            "named_instead": [
+              {
+                "name": "Asterforge",
+                "count": 2
+              },
+              {
+                "name": "Northvale FSM",
+                "count": 2
+              },
+              {
+                "name": "Cindermark",
+                "count": 1
+              },
+              {
+                "name": "Verano FSM",
+                "count": 1
+              }
+            ],
+            "receipt_ids": [
+              "observation-71a94758-099b-443e-808a-c936aafd2339",
+              "observation-fd6c3437-6e32-4061-9ebd-960c11ef9e70",
+              "observation-4f2a320a-30d2-4abb-a383-086505dadf2e"
+            ]
+          },
+          "google_aio": {
+            "label": "Google AI Overviews",
+            "scored": 3,
+            "client_named": 0,
+            "named_instead": [
+              {
+                "name": "Asterforge",
+                "count": 2
+              },
+              {
+                "name": "Cindermark",
+                "count": 2
+              },
+              {
+                "name": "Northvale FSM",
+                "count": 2
+              },
+              {
+                "name": "Orbit Field",
+                "count": 2
+              },
+              {
+                "name": "Verano FSM",
+                "count": 2
+              }
+            ],
+            "receipt_ids": [
+              "observation-dfad2e90-d156-43cb-9dd5-5bccee327ae6",
+              "observation-dee59e30-05c8-46b7-9bf4-6529890eb0ec",
+              "observation-d3d64be8-628a-4248-bfc3-fa0f34095bb7"
+            ]
+          },
+          "google_ai_mode": {
+            "label": "Google AI Mode",
+            "scored": 3,
+            "client_named": 0,
+            "named_instead": [
+              {
+                "name": "Orbit Field",
+                "count": 3
+              },
+              {
+                "name": "Northvale FSM",
+                "count": 2
+              },
+              {
+                "name": "Verano FSM",
+                "count": 2
+              },
+              {
+                "name": "Asterforge",
+                "count": 1
+              },
+              {
+                "name": "Cindermark",
+                "count": 1
+              }
+            ],
+            "receipt_ids": [
+              "observation-3dff51c1-c0c6-43f8-bec2-91bbf4785ca5",
+              "observation-ee2472c2-f299-4ae8-b39a-d5048d120229",
+              "observation-e8b2e9d6-958a-473b-8757-29cd3007d2ee"
+            ]
+          }
+        }
+      },
+      {
+        "question_id": 6,
+        "question_text": "Which field service platforms handle recurring maintenance contracts?",
+        "question_type": "core",
+        "scored": 15,
+        "client_named": 4,
+        "client_absent": 11,
+        "competitors": [
+          {
+            "name": "Northvale FSM",
+            "checked_in": 15,
+            "named": 13,
+            "named_instead": 10,
+            "status": "named"
+          },
+          {
+            "name": "Verano FSM",
+            "checked_in": 15,
+            "named": 4,
+            "named_instead": 3,
+            "status": "named"
+          },
+          {
+            "name": "Asterforge",
+            "checked_in": 15,
+            "named": 3,
+            "named_instead": 2,
+            "status": "named"
+          },
+          {
+            "name": "Trakwell",
+            "checked_in": 15,
+            "named": 1,
+            "named_instead": 1,
+            "status": "named"
+          },
+          {
+            "name": "Cindermark",
+            "checked_in": 15,
+            "named": 0,
+            "named_instead": 0,
+            "status": "checked_not_found"
+          },
+          {
+            "name": "Orbit Field",
+            "checked_in": 15,
+            "named": 0,
+            "named_instead": 0,
+            "status": "checked_not_found"
+          }
+        ],
+        "checklist": "complete",
+        "per_engine": {
+          "chatgpt": {
+            "label": "ChatGPT",
+            "scored": 3,
+            "client_named": 1,
+            "named_instead": [
+              {
+                "name": "Northvale FSM",
+                "count": 2
+              },
+              {
+                "name": "Verano FSM",
+                "count": 1
+              }
+            ],
+            "receipt_ids": [
+              "observation-04942356-eb59-4177-8644-7aeb3748a08d",
+              "observation-a7ab3733-737d-40e4-983d-4d71eb543a01",
+              "observation-36041695-d66a-44d3-bfe6-2e9e3c8b2d55"
+            ]
+          },
+          "claude": {
+            "label": "Claude",
+            "scored": 3,
+            "client_named": 2,
+            "named_instead": [
+              {
+                "name": "Asterforge",
+                "count": 1
+              },
+              {
+                "name": "Northvale FSM",
+                "count": 1
+              },
+              {
+                "name": "Verano FSM",
+                "count": 1
+              }
+            ],
+            "receipt_ids": [
+              "observation-72ee1785-d168-4ae5-955e-3cc9088873e1",
+              "observation-9d61ba79-8c66-4915-966a-dff7009ed4e1",
+              "observation-9ffea651-5f22-4527-9e15-08785a394218"
+            ]
+          },
+          "perplexity": {
+            "label": "Perplexity",
+            "scored": 3,
+            "client_named": 0,
+            "named_instead": [
+              {
+                "name": "Northvale FSM",
+                "count": 2
+              }
+            ],
+            "receipt_ids": [
+              "observation-5908762a-3007-4244-8f49-4481484d0d19",
+              "observation-f14efd17-db38-4f6f-b8a9-909f8c47eef9",
+              "observation-6823fd4f-8c5d-4719-a3af-21783985e397"
+            ]
+          },
+          "google_aio": {
+            "label": "Google AI Overviews",
+            "scored": 3,
+            "client_named": 0,
+            "named_instead": [
+              {
+                "name": "Northvale FSM",
+                "count": 3
+              },
+              {
+                "name": "Asterforge",
+                "count": 1
+              }
+            ],
+            "receipt_ids": [
+              "observation-ad38edce-6b6d-4386-9f84-7d2aad57d99d",
+              "observation-53d8edee-9e47-406c-85e8-4f338a64b037",
+              "observation-2d62cb86-bd73-45ad-b9fd-a0c3b5add2d3"
+            ]
+          },
+          "google_ai_mode": {
+            "label": "Google AI Mode",
+            "scored": 3,
+            "client_named": 1,
+            "named_instead": [
+              {
+                "name": "Northvale FSM",
+                "count": 2
+              },
+              {
+                "name": "Trakwell",
+                "count": 1
+              },
+              {
+                "name": "Verano FSM",
+                "count": 1
+              }
+            ],
+            "receipt_ids": [
+              "observation-bc6c94eb-7996-46b5-a18f-f9185147686d",
+              "observation-6666fac3-b73e-4c3a-89c2-8b6e7ac30af3",
+              "observation-17bd282f-184a-4afb-a226-63f03c2ab027"
+            ]
+          }
+        }
+      }
+    ],
+    "pagination": {
+      "limit": 3,
+      "next_cursor": "YzE6Ng",
+      "total": 10
+    }
+  }
+}

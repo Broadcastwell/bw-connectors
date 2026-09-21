@@ -55,6 +55,10 @@ jobs:
         working-directory: packages/n8n-nodes-broadcastwell
         run: npm test
 
+      - name: "Looker Studio connector: build and test"
+        working-directory: looker-studio
+        run: npm run build && npm test
+
       - name: Copy check across the repository
         run: node packages/api/scripts/check-copy.mjs .
 

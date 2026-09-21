@@ -1,0 +1,145 @@
+{
+  "_note": "Captured from the live Broadcastwell API with the public demo key. Kalvenor is fictional sample data.",
+  "captured_on": "2026-09-21",
+  "request": "GET /accounts/sample/alerts?limit=100",
+  "status": 200,
+  "headers": {
+    "content-type": "application/json; charset=utf-8",
+    "ratelimit-limit": "30",
+    "ratelimit-remaining": "19"
+  },
+  "body": {
+    "sample": true,
+    "notice": "Sample data. Kalvenor Systems is a fictional company.",
+    "data": [
+      {
+        "alert_id": "movement:question_type:core:kalvenor-monitor/2026-06:baseline-kalvenor-v11/run-1",
+        "rule": "named_rate_moved",
+        "scope": "question_type",
+        "key": "core",
+        "label": "Core category",
+        "direction": "up",
+        "from": {
+          "run_id": "kalvenor-monitor",
+          "pass_id": "2026-06",
+          "observed_on": "2026-06-12",
+          "named": 3,
+          "scored": 50,
+          "named_rate": {
+            "pct": 6,
+            "low": 2.1,
+            "high": 16.2,
+            "interval": "2.1 to 16.2",
+            "base": "3 of 50 answers"
+          }
+        },
+        "to": {
+          "run_id": "baseline-kalvenor-v11",
+          "pass_id": "run-1",
+          "observed_on": "2026-07-08",
+          "named": 15,
+          "scored": 48,
+          "named_rate": {
+            "pct": 31.3,
+            "low": 19.9,
+            "high": 45.3,
+            "interval": "19.9 to 45.3",
+            "base": "15 of 48 answers"
+          }
+        },
+        "observed_on": "2026-07-08",
+        "statement": "Core category: 15 of 48 answers named the client on 2026-07-08, against 3 of 50 on 2026-06-12. The two 95% intervals do not overlap.",
+        "links": {
+          "receipts": "https://app.broadcastwell.com/api/v1/accounts/sample/runs/baseline-kalvenor-v11/receipts?pass_id=run-1"
+        }
+      },
+      {
+        "alert_id": "movement:account:account:kalvenor-monitor/2026-05:kalvenor-monitor/2026-06",
+        "rule": "named_rate_moved",
+        "scope": "account",
+        "key": "account",
+        "label": "All questions and engines",
+        "direction": "down",
+        "from": {
+          "run_id": "kalvenor-monitor",
+          "pass_id": "2026-05",
+          "observed_on": "2026-05-12",
+          "named": 20,
+          "scored": 50,
+          "named_rate": {
+            "pct": 40,
+            "low": 27.6,
+            "high": 53.8,
+            "interval": "27.6 to 53.8",
+            "base": "20 of 50 answers"
+          }
+        },
+        "to": {
+          "run_id": "kalvenor-monitor",
+          "pass_id": "2026-06",
+          "observed_on": "2026-06-12",
+          "named": 3,
+          "scored": 50,
+          "named_rate": {
+            "pct": 6,
+            "low": 2.1,
+            "high": 16.2,
+            "interval": "2.1 to 16.2",
+            "base": "3 of 50 answers"
+          }
+        },
+        "observed_on": "2026-06-12",
+        "statement": "All questions and engines: 3 of 50 answers named the client on 2026-06-12, against 20 of 50 on 2026-05-12. The two 95% intervals do not overlap.",
+        "links": {
+          "receipts": "https://app.broadcastwell.com/api/v1/accounts/sample/runs/kalvenor-monitor/receipts?pass_id=2026-06"
+        }
+      },
+      {
+        "alert_id": "movement:question_type:core:kalvenor-monitor/2026-05:kalvenor-monitor/2026-06",
+        "rule": "named_rate_moved",
+        "scope": "question_type",
+        "key": "core",
+        "label": "Core category",
+        "direction": "down",
+        "from": {
+          "run_id": "kalvenor-monitor",
+          "pass_id": "2026-05",
+          "observed_on": "2026-05-12",
+          "named": 20,
+          "scored": 50,
+          "named_rate": {
+            "pct": 40,
+            "low": 27.6,
+            "high": 53.8,
+            "interval": "27.6 to 53.8",
+            "base": "20 of 50 answers"
+          }
+        },
+        "to": {
+          "run_id": "kalvenor-monitor",
+          "pass_id": "2026-06",
+          "observed_on": "2026-06-12",
+          "named": 3,
+          "scored": 50,
+          "named_rate": {
+            "pct": 6,
+            "low": 2.1,
+            "high": 16.2,
+            "interval": "2.1 to 16.2",
+            "base": "3 of 50 answers"
+          }
+        },
+        "observed_on": "2026-06-12",
+        "statement": "Core category: 3 of 50 answers named the client on 2026-06-12, against 20 of 50 on 2026-05-12. The two 95% intervals do not overlap.",
+        "links": {
+          "receipts": "https://app.broadcastwell.com/api/v1/accounts/sample/runs/kalvenor-monitor/receipts?pass_id=2026-06"
+        }
+      }
+    ],
+    "pagination": {
+      "limit": 100,
+      "next_cursor": null,
+      "total": 3
+    }
+  }
+}

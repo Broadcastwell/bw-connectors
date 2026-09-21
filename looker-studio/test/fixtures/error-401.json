@@ -1,0 +1,16 @@
+{
+  "_note": "Captured from the live Broadcastwell API with the public demo key. Kalvenor is fictional sample data.",
+  "captured_on": "2026-09-21",
+  "request": "GET /me",
+  "status": 401,
+  "headers": {
+    "content-type": "application/problem+json; charset=utf-8"
+  },
+  "body": {
+    "type": "https://app.broadcastwell.com/developers#error-unauthorized",
+    "title": "A valid API key is required",
+    "status": 401,
+    "code": "unauthorized",
+    "detail": "Send your key as Authorization: Bearer followed by the key. Create one under API keys in your account, or use the public demo key to read the sample."
+  }
+}
