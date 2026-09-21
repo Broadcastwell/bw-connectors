@@ -81,7 +81,7 @@ npm run lint
 npm test
 ```
 
-CI runs the same steps on Node 20 and 22. See [CONTRIBUTING.md](CONTRIBUTING.md).
+CI runs the same steps on Node 22 and 24. Developing in this repository needs Node 22 or later; the API client itself runs on Node 18 and later. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Security
 
