@@ -1,0 +1,18 @@
+{
+  "name": "bw-connectors",
+  "private": true,
+  "description": "Broadcastwell connectors: the JavaScript API client, the n8n node and more.",
+  "license": "MIT",
+  "workspaces": [
+    "packages/api",
+    "packages/n8n-nodes-broadcastwell"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "lint": "npm run lint --workspaces && node packages/api/scripts/check-copy.mjs .",
+    "test": "npm test --workspaces"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
