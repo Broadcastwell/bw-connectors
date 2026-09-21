@@ -1,0 +1,67 @@
+{
+  "name": "@broadcastwell/api",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Dependency free JavaScript client for the Broadcastwell API: runs, receipts, sources, fixes, history, alerts and proof, plus webhook signature verification.",
+  "license": "MIT",
+  "author": {
+    "name": "Broadcastwell",
+    "email": "hello@broadcastwell.com",
+    "url": "https://broadcastwell.com"
+  },
+  "homepage": "https://github.com/Broadcastwell/bw-connectors/tree/main/packages/api#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Broadcastwell/bw-connectors.git",
+    "directory": "packages/api"
+  },
+  "bugs": {
+    "url": "https://github.com/Broadcastwell/bw-connectors/issues"
+  },
+  "keywords": [
+    "broadcastwell",
+    "api",
+    "client",
+    "ai-visibility",
+    "webhooks"
+  ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./src/index.mjs",
+  "types": "./types.d.ts",
+  "exports": {
+    ".": {
+      "types": "./types.d.ts",
+      "import": "./src/index.mjs",
+      "require": "./dist/index.cjs",
+      "default": "./src/index.mjs"
+    },
+    "./routes": {
+      "types": "./types.d.ts",
+      "import": "./src/routes.mjs"
+    },
+    "./openapi.json": "./openapi.json",
+    "./global": "./dist/broadcastwell.global.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "dist",
+    "types.d.ts",
+    "openapi.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "generate": "node scripts/generate-types.mjs",
+    "generate:fetch": "node scripts/generate-types.mjs --fetch",
+    "build": "node scripts/generate-types.mjs && node scripts/build.mjs",
+    "lint": "node scripts/generate-types.mjs --check && node scripts/build.mjs --check && node scripts/check-copy.mjs",
+    "test": "node --test test/*.test.mjs",
+    "demo": "node examples/demo.mjs"
+  }
+}
