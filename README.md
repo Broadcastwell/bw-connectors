@@ -32,7 +32,11 @@ Lives in [`slack/`](slack/). See that folder for setup.
 
 ## ChatGPT and Claude connector
 
-Connect ChatGPT or Claude to your Broadcastwell account. Setup is described at [app.broadcastwell.com/developers](https://app.broadcastwell.com/developers).
+Connect ChatGPT or Claude to your Broadcastwell account. Setup is described at [app.broadcastwell.com/connect](https://app.broadcastwell.com/connect).
+
+- **Public sample, no sign in.** Add `https://app.broadcastwell.com/mcp/demo/kalvenor` as a custom connector and choose no authentication. It reads the fictional Kalvenor sample and nothing else.
+- **Your own account.** Add `https://app.broadcastwell.com/mcp/account`. The connector signs in with OAuth 2.1 (authorization code with PKCE): Claude finds the sign in on its own, and in ChatGPT you choose OAuth. Access is read only, lasts one hour at a time, renews while the connection is in use, and stops at once when you disconnect it under Connected apps in your account.
+- **A client that cannot sign in** can send a named, read only account token as a Bearer token instead, with an expiry of 7, 30 or 90 days.
 
 ## Quick start
 
